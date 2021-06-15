@@ -35,12 +35,7 @@ pip install teachablehub
 [Read the full Python SDK Docs](https://)
 
 
-### Simple Example
+## <a id="how-to-deploy-examples"></a> Examples
 ```
-simple example here
-```
-
-### Advanced Example
-```
-advanced example here
+example here
 ```
