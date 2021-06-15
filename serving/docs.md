@@ -2,9 +2,27 @@
 
 ### <a id="how-to-predict-getting-started"></a> Getting Started
 
-Някакво въведение
+Teachables могат да бъдат интегрирани във всяка една платформа, чрез SDK или Rest API. И тнт локуми
+
+#### Setup Serving Keys
+
+Тук кратка информация за serving кийс, че чрез тях контролираш, кой може да прави предикшъни към кой environment за по-добро секюрити и тнт. Добри примери за serving keys са `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
+
+- Create a new serving key (евентуално линк към ключовете)
+
 
 ### <a id="how-to-predict-python-sdk"></a> Python SDK
+
+Най-бързия и удобен начин да си интегрираш teachablehub platfrom в твоя python software е чрез Python SDK. ...
+
+#### Install Python SDK
+
+За ползват python sdk-то. трябва да го инсталират с тази команда. Изисква минимална пайтън версия Python 3.4+
+
+```
+pip install teachablehub
+```
+
 
 #### Simple Predictions
 
