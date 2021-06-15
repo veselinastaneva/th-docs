@@ -36,8 +36,9 @@ pip install teachablehub
 
 
 ## <a id="how-to-deploy-examples"></a> Examples
-```
-https://my.domain.com/{{handler}}/{{environment}}/{{deployment}}/predict
+```python
+from sklearn import svm
+from sklearn import datasets
 ```
 
 {{banner}}
