@@ -1,5 +1,4 @@
-<a id="how-to-deploy" class="hash-to-scroll"></a>
-## <a id="how-to-deploy" />How to Deploy
+## <a id="how-to-deploy" class="hash-to-scroll"></a> How to Deploy
 
 <a id="how-to-deploy-getting-started" class="hash-to-scroll"></a>
 ### Getting Started
