@@ -18,35 +18,30 @@ pip install teachablehub
 
 ## <a id="how-to-deploy-SDK"></a> Python SDK Docs
 
+  - Initializer
+  - classes
+  - schema
+  - context
+  - model
+  - deploy
+  - successful
+  - activate
+  - rollback
+  - version
+  - errors/exceptions 
 
-property: initializer
-description: как се инициализира метода
-params: teachable, environment, deploy_key, version
+[Read the full Python SDK Docs](https://)
 
 
-### .classes()
-
-dwdwdwdwdwdw
-
+### Simple Example
 ```
-dwdw
+simple example here
 ```
 
-schema
-context
-model
-deploy
-successful
-activate
-rollback
-version
-
-
-<br />
-<br />
-<hr />
-<br />
-<br />
+### Advanced Example
+```
+advanced example here
+```
 
 ## <a id="how-to-predict"></a> Make Predictions
 
@@ -59,4 +54,28 @@ Create React App is an officially supported way to create single-page React appl
 npx create-react-app my-app
 cd my-app
 npm start
+```
+
+### <a id="how-to-predict-rest-api"></a> Python SDK
+### Quick Start
+```
+exmaple here
+```
+
+### <a id="how-to-predict-rest-api"></a> Swift SDK
+### Quick Start
+```
+exmaple here
+```
+
+### <a id="how-to-predict-rest-api"></a> Ruby SDK
+### Quick Start
+```
+exmaple here
+```
+
+### <a id="how-to-predict-rest-api"></a> NodeJS SDK
+### Quick Start
+```
+exmaple here
 ```
