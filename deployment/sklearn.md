@@ -1,8 +1,6 @@
-# sklearn
+# <a id="how-to-deploy"></a> How to Deploy
 
-## <a id="how-to-deploy"></a> How to Deploy
-
-### <a id="how-to-deploy-getting-started"></a> Getting Started
+## <a id="how-to-deploy-getting-started"></a> Getting Started
 
 You can integrate this SDK in your training logic, Jupyter notebook during experimentation, or your CI/CD system during the production environment. This SDK is also applicable for deploying existing models from your model registry or storage.
 
@@ -56,9 +54,3 @@ deployment.deploy(
   - errors/exceptions 
 
 [Read the full Python SDK Docs](https://)
-
-
-
-{{banner}}
-
-
