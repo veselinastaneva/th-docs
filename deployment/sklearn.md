@@ -14,7 +14,7 @@ pip install teachablehub
 
 #### Setup Deployment Keys
 
-Тук кратка информация за деплоймънт кийс, че служат за деплой на модели, че може да се ограничават по environment за по-добро секюрити и тнт.
+Тук кратка информация за деплоймънт кийс, че служат за деплой на модели, че може да се ограничават по environment за по-добро секюрити и тнт. Добри примери за deployment keys са `production`, `staging`, `backenders-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
 - Create a new deploy key (евентуално линк към ключовете)
 
