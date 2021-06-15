@@ -16,7 +16,30 @@ pip install teachablehub
 
 #### Setup Deployment Keys
 
-- Create a deploy key (евентуално линк към ключовете)
+Тук кратка информация за деплоймънт кийс, че служат за деплой на модели, че може да се ограничават по environment за по-добро секюрити и тнт.
+
+- Create a new deploy key (евентуално линк към ключовете)
+
+
+## <a id="how-to-deploy-examples"></a> Examples
+
+```python
+from teachablehub.deployments.sklearn import TeachableDeployment
+
+# ... training logic here ...
+
+deployment = TeachableDeployment(
+    teachable="user/teachable",
+    environment="production",
+    deploy_key="your-deploy-key-here",
+)
+
+deployment.model(clf)
+deployment.deploy(
+    summary="Automatic deployment from our CI via sklearn-deploy.py",
+    activate=True
+)
+```
 
 ## <a id="how-to-deploy-SDK"></a> Python SDK Docs
 
@@ -35,11 +58,6 @@ pip install teachablehub
 [Read the full Python SDK Docs](https://)
 
 
-## <a id="how-to-deploy-examples"></a> Examples
-```python
-from sklearn import svm
-from sklearn import datasets
-```
 
 {{banner}}
 
