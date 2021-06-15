@@ -37,7 +37,7 @@ pip install teachablehub
 
 ## <a id="how-to-deploy-examples"></a> Examples
 ```
-example here
+https://my.domain.com/{{handler}}/{{environment}}/{{deployment}}/predict
 ```
 
 {{banner}}
