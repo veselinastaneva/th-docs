@@ -39,3 +39,7 @@ pip install teachablehub
 ```
 example here
 ```
+
+{{banner}}
+
+
