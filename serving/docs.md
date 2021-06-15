@@ -1,6 +1,6 @@
-## Make Predictions
+# Make Predictions
 
-### <a id="how-to-predict-getting-started"></a> Getting Started
+## <a id="how-to-predict-getting-started"></a> Getting Started
 
 Teachables могат да бъдат интегрирани във всяка една платформа, чрез SDK или Rest API. И тнт локуми
 
@@ -11,7 +11,7 @@ Teachables могат да бъдат интегрирани във всяка �
 - Create a new serving key (евентуално линк към ключовете)
 
 
-### <a id="how-to-predict-python-sdk"></a> Python SDK
+## <a id="how-to-predict-python-sdk"></a> Python SDK
 
 Най-бързия и удобен начин да си интегрираш teachablehub platfrom в твоя python software е чрез Python SDK. ...
 
@@ -88,7 +88,7 @@ print(predictions)
 ```
 
 
-### <a id="how-to-predict-rest-api"></a> REST API
+## <a id="how-to-predict-rest-api"></a> REST API
 
 #### Simple Predictions
 
