@@ -4,7 +4,7 @@
 
 You can integrate this SDK in your training logic, Jupyter notebook during experimentation, or your CI/CD system during the production environment. This SDK is also applicable for deploying existing models from your model registry or storage.
 
-#### Install Python SDK
+### 1. Install Python SDK
 
 Тук трябва да напишем, че existing и нови модели се деплойват с питонското сдк. Минимална пайтън версия Python 3.4+
 
@@ -12,14 +12,14 @@ You can integrate this SDK in your training logic, Jupyter notebook during exper
 pip install teachablehub
 ```
 
-#### Setup Deployment Keys
+### 2. Setup Deployment Keys
 
 Тук кратка информация за деплоймънт кийс, че служат за деплой на модели, че може да се ограничават по environment за по-добро секюрити и тнт. Добри примери за deployment keys са `production`, `staging`, `backenders-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
 [Create a new deploy key](https://app-th-com.vercel.app/mignev/officedemo/settings/deploy-keys)
 
 
-## <a id="how-to-deploy-examples"></a> Examples
+## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
 ```python
 from teachablehub.deployments.sklearn import TeachableDeployment
