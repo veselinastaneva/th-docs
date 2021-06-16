@@ -205,9 +205,9 @@ The TeachableHub's Serving API respond with the following HTTP Response codes an
 
 | Code     |      Message      |
 |-----------|:-------------|
-| 403     |  No serving key provided |
-| 401     |  You are not authorized to access {environment} environment of {user}/{teachable_name} |
 | 400     |  Bad request for various reasons. For more information read the error messages. |
+| 401     |  You are not authorized to access {environment} environment of {user}/{teachable_name} |
+| 403     |  No serving key provided |
 | 500     |  Unhandled internal server error. Please open a ticket to report it. |
 | 501     |  Not Implemented features or methods. |
 
