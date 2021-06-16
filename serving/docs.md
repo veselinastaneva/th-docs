@@ -69,11 +69,11 @@ print(predictions)
 
 Със всеки един предикшън могат да се добавят и следните Params. Те рабоят за Teachables с дефинирани classes.
 
-| Param     |      Values      |  Description |
-|-----------|:-------------:|:------|
-| order     |  `desc` or `asc` **default**: `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| limit     |    `int` **default**: `-1`  |   колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| threshold | `float` **min**: `0.0` **max** `1.0` **default**: `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+| Param | Values | Default | Description |
+| :---  | :--- | :--- | :--- |
+| order     |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| limit     |    `int` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| threshold | `float` **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
 
 
 ### Making Predictions on specific deployment version
