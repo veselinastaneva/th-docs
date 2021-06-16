@@ -179,3 +179,15 @@ Wihout Classes defined:
   ]
 }
 ```
+
+### Errors
+
+The TeachableHub's Serving API respond with the following HTTP Response codes and messages:
+
+| Code     |      Message      |
+|-----------|:-------------|
+| 403     |  No serving key provided |
+| 401     |  You are not authorized to access {environment} environment of {user}/{teachable_name} |
+| 400     |  Bad request for various reasons. For more information read the error messages. |
+| 501     |  Not Implemented features or methods. |
+
