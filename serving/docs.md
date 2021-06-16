@@ -102,6 +102,7 @@ The SDK raise the following exceptions:
 | Error     |      Reason      |
 |-----------|:-------------:|
 | `MissingTeachableError`     |  Teachable is required for every prediction |
+| `NoThAuthMethodError`     |  Missing Serving Key param in the initializer |
 | `UnsuccessfulRequestError`     |  General Serving API errors 4xx and 5xx |
 | `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
