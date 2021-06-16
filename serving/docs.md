@@ -64,10 +64,16 @@ predictions = teachable.predict(features, order='desc', limit=10, threshold=0.5)
 print(predictions)
 ```
 
-Допълнителни параметри:
-- order: [desc|asc] - сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а.
-- limit: [int] - колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а.
-- threshold: [float, min: 0.0 max: 1.0 - да върне всички класове които конфиденса на модела е над този трешхолд.]
+#### Additional Params:
+
+Със всеки един предикшън могат да се добавят и следните Params. Те рабоят за Teachables с дефинирани classes.
+
+| Param     |      Values      |  Description |
+|-----------|:-------------:|:------|
+| order     |  `desc` or `asc` **default**: `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| limit     |    `int` **default**: `-1`  |   колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| threshold | `float` **min**: `0.0` **max** `1.0` **default**: `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+
 
 ### Making Predictions on specific deployment version
 
@@ -87,6 +93,13 @@ predictions = teachable.predict([[0.03, 0.05]])
 print(predictions)
 ```
 
+### Errors
+
+The SDK raise the following exceptions:
+
+- `MissingTeachableError` - Teachable is required for every prediction
+- `UnsuccessfulRequestError` - General Serving API errors 4xx and 5xx
+- `UnauthorizedError` - Wrong Serving Key or configuration.
 
 ## <a id="how-to-predict-rest-api"></a> REST API
 
