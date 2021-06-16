@@ -56,8 +56,8 @@ teachable = TeachableHubPredictAPI(
 )
 
 features = {
-    "age": 0.03,
-    "sex": 0.05
+    "feature_1": 0.03,
+    "feature_2": 0.05
 }
 
 predictions = teachable.predict(features, order='desc', limit=10, threshold=0.5)
@@ -129,7 +129,7 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "features": [
-    {"age": 0.3, "sex": 0.5}
+    {"feature_1": 0.3, "feature_2": 0.5}
   ]
 }'
 ```
@@ -167,15 +167,15 @@ With Classes defined:
   "request_id": "51b5597c-6c12-4559-948f-8a789756af9d",
   "predictions": [
     {
-      "className": "Setosa",
+      "className": "Class1",
       "probability": 0.4830337783311345
     },
     {
-      "className": "Virginica",
+      "className": "Class2",
       "probability": 0.31854067893251076
     },
     {
-      "className": "Versicolour",
+      "className": "Class3",
       "probability": 0.1984255427363547
     }
   ]
