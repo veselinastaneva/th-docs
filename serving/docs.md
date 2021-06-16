@@ -107,6 +107,8 @@ The SDK raise the following exceptions:
 
 ## <a id="how-to-predict-rest-api"></a> REST API
 
+You can play around with your teachables via the [Swagger UI](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
+
 ### Simple Predictions
 
 Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
