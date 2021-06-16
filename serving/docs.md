@@ -1,4 +1,6 @@
-## <a id="how-to-predict-getting-started"></a> Getting Started with Predictions
+# How to make Predictions
+
+## <a id="how-to-predict-getting-started"></a> Getting Started
 
 Teachables могат да бъдат интегрирани във всяка една платформа, чрез SDK или Rest API. И тнт локуми
 
