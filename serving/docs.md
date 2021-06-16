@@ -121,13 +121,6 @@ curl -X 'POST' \
 }'
 ```
 
-Допълнителни параметри:
-- order: [desc|asc] - сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а.
-- limit: [int] - колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а.
-- threshold: [float, min: 0.0 max: 1.0 - да върне всички класове които конфиденса на модела е над този трешхолд.]
-
-
-
 #### Making Predictions on specific deployment version
 
 Тук обясняваме, че понеже поддържаме различни енваирмънти и версии на деплоймънтите може да правим и предикшъни към специфична версия и енваиърмънт.
@@ -140,4 +133,49 @@ curl -X 'POST' \
   -d '{
   "ndarray": [[0.3,0.5]]
 }'
+```
+
+#### Additional Query Params:
+
+Със всеки един предикшън към Rest API могат да се подават и следните Query Params
+
+| Param     |      Values      |  Description |
+|-----------|:-------------:|:------|
+| order     |  `desc` or `asc` **default**: `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| limit     |    `int` **default**: `-1`  |   колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| threshold | `float` **min**: `0.0` **max** `1.0` **default**: `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+
+#### Example Responses:
+
+With Classes defined:
+
+```javascript
+{
+  "request_id": "51b5597c-6c12-4559-948f-8a789756af9d",
+  "predictions": [
+    {
+      "className": "Setosa",
+      "probability": 0.4830337783311345
+    },
+    {
+      "className": "Virginica",
+      "probability": 0.31854067893251076
+    },
+    {
+      "className": "Versicolour",
+      "probability": 0.1984255427363547
+    }
+  ]
+}
+```
+
+Wihout Classes defined:
+
+```javascript
+{
+  "request_id": "e1e22637-0222-43a5-850d-a5640493e952",
+  "predictions": [
+    274.6187975893929
+  ]
+}
 ```
