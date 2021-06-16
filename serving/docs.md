@@ -99,9 +99,11 @@ print(predictions)
 
 The SDK raise the following exceptions:
 
-- `MissingTeachableError` - Teachable is required for every prediction
-- `UnsuccessfulRequestError` - General Serving API errors 4xx and 5xx
-- `UnauthorizedError` - Wrong Serving Key or configuration.
+| Error     |      Reason      |
+|-----------|:-------------:|
+| `MissingTeachableError`     |  Teachable is required for every prediction |
+| `UnsuccessfulRequestError`     |  General Serving API errors 4xx and 5xx |
+| `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
 ## <a id="how-to-predict-rest-api"></a> REST API
 
