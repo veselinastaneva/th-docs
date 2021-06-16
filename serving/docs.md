@@ -8,7 +8,7 @@ Teachables могат да бъдат интегрирани във всяка �
 
 Тук кратка информация за serving кийс, че чрез тях контролираш, кой може да прави предикшъни към кой environment за по-добро секюрити и тнт. Добри примери за serving keys са `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
 
-- Create a new serving key (евентуално линк към ключовете)
+[Create a new serving key](https://app-th-com.vercel.app/mignev/officedemo/settings/serving-keys)
 
 
 <a id="how-to-predict-python-sdk"></a>
