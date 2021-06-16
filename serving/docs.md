@@ -11,9 +11,7 @@ Teachables могат да бъдат интегрирани във всяка �
 - Create a new serving key (евентуално линк към ключовете)
 
 
-## <a id="how-to-predict-python-sdk"></a> Python SDK
-
-Най-бързия и удобен начин да си интегрираш teachablehub platfrom в твоя python software е чрез Python SDK. ...
+<a id="how-to-predict-python-sdk"></a>
 
 ### Install Python SDK
 
@@ -24,7 +22,7 @@ pip install teachablehub
 ```
 
 
-### Simple Predictions
+### Your first prediction
 
 Тук трябва да обишем, че на всеки един деплойнът модел без никаква допълнителна настройка може да се правят тези ndarray predictions. 
 
@@ -41,6 +39,10 @@ teachable = TeachableHubPredictAPI(
 predictions = teachable.predict([[0.03, 0.05]])
 print(predictions)
 ```
+
+<br/><br/><br/>
+
+## Advanced Giude
 
 ### Advanced predictions with Features Validation
 
