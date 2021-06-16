@@ -33,24 +33,20 @@ deployment = TeachableDeployment(
 )
 
 deployment.model(clf)
+deployment.samples(ndarray=[X[0]])
 deployment.deploy(
     summary="Automatic deployment from our CI via sklearn-deploy.py",
     activate=True
 )
 ```
 
-## <a id="how-to-deploy-SDK"></a> Python SDK Docs
+For the full list of features and examples checkout the following links:
 
-  - Initializer
-  - classes
-  - schema
-  - context
-  - model
-  - deploy
-  - successful
-  - activate
-  - rollback
-  - version
-  - errors/exceptions 
+- [Deploy an existing model](https://github.com/teachablehub/python-sdk/blob/master/examples/deploy-existing.py)
+- [Advanced Deployment](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-advanced.py)
+- [Advanced Deployment of Regression model](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-regression-advanced.py)
 
-[Read the full Python SDK Docs](https://)
+
+For more details [checkout the Python SDK on GitHub](https://github.com/teachablehub/python-sdk)
+
+<br /><br /><br />
