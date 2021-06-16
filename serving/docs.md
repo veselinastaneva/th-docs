@@ -1,10 +1,8 @@
-# Make Predictions
-
-## <a id="how-to-predict-getting-started"></a> Getting Started
+## <a id="how-to-predict-getting-started"></a> Getting Started with Predictions
 
 Teachables могат да бъдат интегрирани във всяка една платформа, чрез SDK или Rest API. И тнт локуми
 
-### Setup Serving Keys
+### 1. Setup Serving Keys
 
 Тук кратка информация за serving кийс, че чрез тях контролираш, кой може да прави предикшъни към кой environment за по-добро секюрити и тнт. Добри примери за serving keys са `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
 
@@ -13,16 +11,15 @@ Teachables могат да бъдат интегрирани във всяка �
 
 <a id="how-to-predict-python-sdk"></a>
 
-### Install Python SDK
-
-За ползват python sdk-то. трябва да го инсталират с тази команда. Изисква минимална пайтън версия Python 3.4+
+### 2. Install Python SDK
 
 ```
 pip install teachablehub
 ```
 
+За ползват python sdk-то. трябва да го инсталират с тази команда. Изисква минимална пайтън версия Python 3.4+
 
-### Your first prediction
+### 3. Start making Predictions
 
 Тук трябва да обишем, че на всеки един деплойнът модел без никаква допълнителна настройка може да се правят тези ndarray predictions. 
 
@@ -40,9 +37,9 @@ predictions = teachable.predict([[0.03, 0.05]])
 print(predictions)
 ```
 
-<br/><br/><br/>
+<br/><br/>
 
-## Advanced Giude
+## Advanced Predictions Giude
 
 ### Advanced predictions with Features Validation
 
