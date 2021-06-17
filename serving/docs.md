@@ -65,15 +65,15 @@ predictions = teachable.predict(features, order='desc', limit=10, threshold=0.5)
 print(predictions)
 ```
 
-#### Additional Params:
+#### `.predict()` Additional Params:
 
 Със всеки един предикшън могат да се добавят и следните Params. Те рабоят за Teachables с дефинирани classes.
 
-| Param | Values | Default | Description |
-| :---  | :--- | :--- | :--- |
-| order     |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| limit     |    `int` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| threshold | `float` **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+| Param | Type | Values | Default | Description |
+| :---  | :--- | :--- | :--- | :--- |
+| order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
 
 
 ### Making Predictions on specific deployment version
@@ -158,11 +158,11 @@ curl -X 'POST' \
 
 Със всеки един предикшън към Rest API могат да се подават и следните Query Params
 
-| Param     |      Values      |  Description |
-|-----------|:-------------:|:------|
-| order     |  `desc` or `asc` **default**: `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| limit     |    `int` **default**: `-1`  |   колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| threshold | `float` **min**: `0.0` **max** `1.0` **default**: `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+| Param | Type | Values | Default | Description |
+| :---  | :--- | :--- | :--- | :--- |
+| order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
 
 ### Example Responses:
 
