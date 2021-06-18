@@ -74,31 +74,31 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 
 <hr />
 
-{{handler}}
+handler: {{handler}}
 
-{{teachable}}
+teachable: {{teachable}}
 
-{{environment}}
+environment: {{environment}}
 
-{{deployment_environment}}
+deployment_environment: {{deployment_environment}}
 
-{{deployment_framework}}
+deployment_framework: {{deployment_framework}}
 
-{{deployment_has_features_schema}}
+deployment_has_features_schema: {{deployment_has_features_schema}}
 
-{{deployment_version}}
+deployment_version: {{deployment_version}}
 
-{{deployment_ndarray_sample}}
+deployment_ndarray_sample: {{deployment_ndarray_sample}}
 
-{{deployment_has_ndarray_sample}}
+deployment_has_ndarray_sample: {{deployment_has_ndarray_sample}}
 
-{{deployment_features_sample}}
+deployment_features_sample: {{deployment_features_sample}}
 
-{{deployment_has_features_sample}}
+deployment_has_features_sample: {{deployment_has_features_sample}}
 
-{{deployment_status_state}}
+deployment_status_state: {{deployment_status_state}}
 
-{{deployment_prediction_result}}
+deployment_prediction_result: {{deployment_prediction_result}}
 
 <hr />
 
