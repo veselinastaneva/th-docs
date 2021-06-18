@@ -72,6 +72,8 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "info", size: "xsmall", title: "Deploy Keys" } }}
 {{link: { to: "www.sashido.io", title: "Create", target: "_blank" } }}
 
+<hr />
+
 {{handler}}
 
 {{teachable}}
@@ -93,6 +95,12 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 {{deployment_features_sample}}
 
 {{deployment_has_features_sample}}
+
+{{deployment_status_state}}
+
+{{deployment_prediction_result}}
+
+<hr />
 
 
 |Error|Reason|
