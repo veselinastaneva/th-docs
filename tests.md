@@ -76,3 +76,4 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 |`NoThAuthMethodError`|Missing Serving Key param in the initializer|
 |`UnsuccessfulRequestError`|General Serving API errors 4xx and 5xx|
 |`UnauthorizedError`|Wrong Serving Key or configuration|
+
