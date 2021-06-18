@@ -28,7 +28,7 @@ pip install teachablehub
   
   {{#if(environment === "production")}}
   
-    `python
+    ```python
       from teachablehub.deployments.sklearn import TeachableDeployment
 
       # ... training logic here ...
@@ -45,7 +45,7 @@ pip install teachablehub
           summary="Automatic deployment from our CI via sklearn-deploy.py",
           activate=True
       )
-    `
+    ```
     
   {{/}}
   
