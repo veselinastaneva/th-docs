@@ -21,13 +21,14 @@ pip install teachablehub
 ## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
 {{#if(framework === "sklearn")}}
+
   {{#if(framework === "sklearn")}}
     {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "xsmall", title: "Deploy Keys" }}}
   {{/}}
   
   {{#if(environment === "production")}}
   
-    ```python
+    `python
       from teachablehub.deployments.sklearn import TeachableDeployment
 
       # ... training logic here ...
@@ -44,9 +45,10 @@ pip install teachablehub
           summary="Automatic deployment from our CI via sklearn-deploy.py",
           activate=True
       )
-    ```
+    `
     
   {{/}}
+  
 {{/}}
 
 For the full list of features and examples checkout the following links:
