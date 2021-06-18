@@ -28,24 +28,24 @@ pip install teachablehub
   
   {{#if(environment === "production")}}
   
-    ```python
-      from teachablehub.deployments.sklearn import TeachableDeployment
+```python
+  from teachablehub.deployments.sklearn import TeachableDeployment
 
-      # ... training logic here ...
+  # ... training logic here ...
 
-      deployment = TeachableDeployment(
-          teachable="{{handler}}/{{teachable}}",
-          environment="{{environment}}",
-          deploy_key="your-deploy-key-here",
-      )
+  deployment = TeachableDeployment(
+      teachable="{{handler}}/{{teachable}}",
+      environment="{{environment}}",
+      deploy_key="your-deploy-key-here",
+  )
 
-      deployment.model(clf)
-      deployment.samples(ndarray=[X_train[0]])
-      deployment.deploy(
-          summary="Automatic deployment from our CI via sklearn-deploy.py",
-          activate=True
-      )
-    ```
+  deployment.model(clf)
+  deployment.samples(ndarray=[X_train[0]])
+  deployment.deploy(
+      summary="Automatic deployment from our CI via sklearn-deploy.py",
+      activate=True
+  )
+```
     
   {{/}}
   
