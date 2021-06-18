@@ -20,24 +20,32 @@ pip install teachablehub
 
 ## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
-```python
-from teachablehub.deployments.sklearn import TeachableDeployment
+{{#if(framework === "sklearn")}}
+  {{#if(framework === "sklearn")}}
+    {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "xsmall", title: "Deploy Keys" }}}
+  {{/}}
+  
+  {{#if(environment === "production")}}
+    ```python
+      from teachablehub.deployments.sklearn import TeachableDeployment
 
-# ... training logic here ...
+      # ... training logic here ...
 
-deployment = TeachableDeployment(
-    teachable="{{handler}}/{{teachable}}",
-    environment="{{environment}}",
-    deploy_key="your-deploy-key-here",
-)
+      deployment = TeachableDeployment(
+          teachable="{{handler}}/{{teachable}}",
+          environment="{{environment}}",
+          deploy_key="your-deploy-key-here",
+      )
 
-deployment.model(clf)
-deployment.samples(ndarray=[X_train[0]])
-deployment.deploy(
-    summary="Automatic deployment from our CI via sklearn-deploy.py",
-    activate=True
-)
-```
+      deployment.model(clf)
+      deployment.samples(ndarray=[X_train[0]])
+      deployment.deploy(
+          summary="Automatic deployment from our CI via sklearn-deploy.py",
+          activate=True
+      )
+    ```
+  {{/}}
+{{/}}
 
 For the full list of features and examples checkout the following links:
 
@@ -61,8 +69,6 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 
 
 {{link: { to: "www.sashido.io", title: "Create", target: "_blank" } }}
-
-
 
 |Error|Reason|
 |-----------|:-------------|
