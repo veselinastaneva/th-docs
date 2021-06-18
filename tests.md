@@ -26,8 +26,8 @@ from teachablehub.deployments.sklearn import TeachableDeployment
 # ... training logic here ...
 
 deployment = TeachableDeployment(
-    teachable="user/teachable",
-    environment="production",
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{environment}}",
     deploy_key="your-deploy-key-here",
 )
 
