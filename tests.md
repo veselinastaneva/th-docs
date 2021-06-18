@@ -4,9 +4,9 @@
 {{link: { to: "www.sashido.io", title: "Create", target: "_blank" } }}
 
 
-| Error     |      Reason      |
+| Error | Reason |
 |-----------|:-------------|
-| `MissingTeachableError`     |  Teachable is required for every prediction |
-| `NoThAuthMethodError`     |  Missing Serving Key param in the initializer |
-| `UnsuccessfulRequestError`     |  General Serving API errors 4xx and 5xx |
-| `UnauthorizedError`     |  Wrong Serving Key or configuration |
+| `MissingTeachableError` | Teachable is required for every prediction |
+| `NoThAuthMethodError` | Missing Serving Key param in the initializer |
+| `UnsuccessfulRequestError` | General Serving API errors 4xx and 5xx |
+| `UnauthorizedError` |  Wrong Serving Key or configuration |
