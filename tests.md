@@ -26,6 +26,7 @@ pip install teachablehub
   {{/}}
   
   {{#if(environment === "production")}}
+  
     ```python
       from teachablehub.deployments.sklearn import TeachableDeployment
 
@@ -44,6 +45,7 @@ pip install teachablehub
           activate=True
       )
     ```
+    
   {{/}}
 {{/}}
 
