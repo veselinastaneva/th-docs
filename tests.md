@@ -20,9 +20,9 @@ pip install teachablehub
 
 ## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
-{{#if(framework === "sklearn")}}
+{{#if(deployment_frameworkdeployment_framework === "sklearn")}}
 
-  {{#if(framework === "sklearn")}}
+  {{#if(deployment_framework === "sklearn")}}
     {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "xsmall", title: "Deploy Keys" }}}
   {{/}}
   
@@ -67,12 +67,33 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 <br /><br /><br />
 
 
-# @pivanov tests
+# @pivanov examples
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "info", size: "xsmall", title: "Deploy Keys" } }}
-
-
 {{link: { to: "www.sashido.io", title: "Create", target: "_blank" } }}
+
+{{handler}}
+
+{{teachable}}
+
+{{environment}}
+
+{{deployment_environment}}
+
+{{deployment_framework}}
+
+{{deployment_has_features_schema}}
+
+{{deployment_version}}
+
+{{deployment_ndarray_sample}}
+
+{{deployment_has_ndarray_sample}}
+
+{{deployment_features_sample}}
+
+{{deployment_has_features_sample}}
+
 
 |Error|Reason|
 |-----------|:-------------|
