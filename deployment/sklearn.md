@@ -48,7 +48,7 @@ For the full list of features and examples checkout the following links:
 - [Advanced Deployment](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-advanced.py)
 - [Advanced Deployment of Regression model](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-regression-advanced.py)
 
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", style: "{marginRight: '5px'}", type: "grey", size: "small", title: "Deploy an existing model" } }} {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", style: "{marginRight: '5px'}", type: "grey", size: "small", title: "Advanced Deployment" } }} {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", style: "{marginRight: '5px'}", type: "grey", size: "small", title: "Advanced Deployment of Regression model" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", style: "{\"marginRight\": \"5px\"}", type: "grey", size: "small", title: "Deploy an existing model" } }} {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", style: "{\"marginRight\": \"5px\"}", type: "grey", size: "small", title: "Advanced Deployment" } }} {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", style: "{\"marginRight\": \"5px\"}", type: "grey", size: "small", title: "Advanced Deployment of Regression model" } }}
 
 <br /><br /><br />
 
