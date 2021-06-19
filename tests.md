@@ -20,7 +20,7 @@ pip install teachablehub
 
 ## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
-{{#if(deployment_frameworkdeployment_framework === "sklearn")}}
+{{#if(deployment_framework === "sklearn")}}
 
   {{#if(deployment_framework === "sklearn")}}
     {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "xsmall", title: "Deploy Keys" }}}
