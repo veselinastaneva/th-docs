@@ -40,7 +40,7 @@ deployment.deploy(
 )
 ```
 
-> You can find the full example here: {{link: { to: "https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy.py", title: "sklearn-train-deploy.py", target: "_blank" } }}
+> You can find the full example here: [sklearn-train-deploy.py](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy.py)
 
 For the full list of features and examples checkout the following links:
 
