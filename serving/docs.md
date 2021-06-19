@@ -8,7 +8,7 @@ Teachables могат да бъдат интегрирани във всяка �
 
 Тук кратка информация за serving кийс, че чрез тях контролираш, кой може да прави предикшъни към кой environment за по-добро секюрити и тнт. Добри примери за serving keys са `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
 
-[Create a new serving key](https://app-th-com.vercel.app/mignev/officedemo/settings/serving-keys)
+{{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys/new", type: "primary", size: "normal", title: "Create a new Serving Key" } }}
 
 
 <a id="how-to-predict-python-sdk"></a>
@@ -30,12 +30,19 @@ pip install teachablehub
 from teachablehub.clients import TeachableHubPredictAPI
 
 teachable = TeachableHubPredictAPI(
-    teachable="user/teachable",
-    environment="production",
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_environment}}",
     serving_key="your-serving-key-here"
 )
+{{#if(deployment_has_features_sample)}}
+features = deployment_features_sample
 
+predictions = teachable.predict(features)
+{{/}}
+{{#if(!deployment_has_features_sample)}}
 predictions = teachable.predict({{deployment_ndarray_sample}})
+{{/}}
+
 print(predictions)
 ```
 
