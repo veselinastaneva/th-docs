@@ -18,9 +18,18 @@ pip install teachablehub
 
 {{button: { to: "/{{handler}}/{{teachable}}/deployments", type: "success", size: "small", title: "Create a new serving key" } }}
 
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "primary", size: "medium", title: "Create a new deploy key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "secondary", size: "normal", title: "Create a new deploy key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "info", size: "normal", title: "Create a new deploy key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Create a new deploy key" } }}
+
+- xsmall | small | normal | medium
+- primary | secondary | success | info | warning | danger | grey
+
 ## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
-{{#if(deployment_framework === "sklearn")}}
+{{#
+(deployment_framework === "sklearn")}}
 
   {{#if(deployment_framework === "sklearn")}}
     {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "xsmall", title: "Deploy Keys" }}}
