@@ -26,7 +26,7 @@ pip install teachablehub
     {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "xsmall", title: "Deploy Keys" }}}
   {{/}}
   
-  {{#if(environment === "production")}}
+  {{#if(deployment_environment === "production")}}
   
 ```python
   from teachablehub.deployments.sklearn import TeachableDeployment
