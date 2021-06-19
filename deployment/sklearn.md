@@ -40,6 +40,8 @@ deployment.deploy(
 )
 ```
 
+> You can find the full example here: {{link: { to: "https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy.py", title: "sklearn-train-deploy.py", target: "_blank" } }}
+
 For the full list of features and examples checkout the following links:
 
 - [Deploy an existing model](https://github.com/teachablehub/python-sdk/blob/master/examples/deploy-existing.py)
@@ -47,15 +49,10 @@ For the full list of features and examples checkout the following links:
 - [Advanced Deployment of Regression model](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-regression-advanced.py)
 
 
-For more details [checkout the Python SDK on GitHub](https://github.com/teachablehub/python-sdk)
-
-<br /><br />
+<br /><br /><br />
 
 ## Advanced Deployment Guide
 
-<br /><br /><br />
+Here information about the advanced deployment.
 
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "primary", size: "medium", title: "Create a new deploy key" } }}
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "secondary", size: "normal", title: "Create a new deploy key" } }}
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "info", size: "normal", title: "Create a new deploy key" } }}
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Create a new deploy key" } }}
+<br /><br /><br />
