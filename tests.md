@@ -35,7 +35,7 @@ pip install teachablehub
 
   deployment = TeachableDeployment(
       teachable="{{handler}}/{{teachable}}",
-      environment="{{environment}}",
+      environment="{{deployment_environment}}",
       deploy_key="your-deploy-key-here",
   )
 
@@ -77,8 +77,6 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 handler: {{handler}}
 
 teachable: {{teachable}}
-
-environment: {{environment}}
 
 deployment_environment: {{deployment_environment}}
 
