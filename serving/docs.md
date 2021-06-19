@@ -35,7 +35,7 @@ teachable = TeachableHubPredictAPI(
     serving_key="your-serving-key-here"
 )
 {{#if(deployment_has_features_sample)}}
-features = deployment_features_sample
+features = {{deployment_features_sample}}
 
 predictions = teachable.predict(features)
 {{/}}
@@ -94,7 +94,7 @@ teachable = TeachableHubPredictAPI(
 )
 
 {{#if(deployment_has_features_sample)}}
-features = deployment_features_sample
+features = {{deployment_features_sample}}
 
 predictions = teachable.predict(features)
 {{/}}
@@ -133,7 +133,7 @@ curl -X 'POST' \
   -H 'X-Serving-Key: your-serving-key' \
   -H 'Content-Type: application/json' \
   -d '{
-  "ndarray": [[0.3,0.5]]
+  "ndarray": {{deployment_ndarray_sample}}
 }'
 ```
 
@@ -148,7 +148,7 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '{
   "features": [
-    {"feature_1": 0.3, "feature_2": 0.5}
+    {{deployment_features_sample}}
   ]
 }'
 ```
@@ -163,7 +163,7 @@ curl -X 'POST' \
   -H 'X-Serving-Key: your-serving-key' \
   -H 'Content-Type: application/json' \
   -d '{
-  "ndarray": [[0.3,0.5]]
+  "ndarray": {{deployment_ndarray_sample}}
 }'
 ```
 
