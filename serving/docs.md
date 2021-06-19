@@ -8,7 +8,7 @@ Teachables могат да бъдат интегрирани във всяка �
 
 Тук кратка информация за serving кийс, че чрез тях контролираш, кой може да прави предикшъни към кой environment за по-добро секюрити и тнт. Добри примери за serving keys са `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
 
-{{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys/new", type: "primary", size: "normal", title: "Create a new Serving Key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys/new", type: "primary", size: "medium", title: "Create a new Serving Key" } }}
 
 
 <a id="how-to-predict-python-sdk"></a>
@@ -47,7 +47,7 @@ print(predictions)
 
 <br/><br/>
 
-## Advanced Predictions Giude
+## Advanced Predictions Guide
 
 ### Advanced predictions with Features Validation
 
