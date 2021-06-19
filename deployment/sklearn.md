@@ -16,7 +16,7 @@ pip install teachablehub
 
 Тук кратка информация за деплоймънт кийс, че служат за деплой на модели, че може да се ограничават по environment за по-добро секюрити и тнт. Добри примери за deployment keys са `production`, `staging`, `backenders-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
-[Create a new deploy key](https://app-th-com.vercel.app/mignev/officedemo/settings/deploy-keys)
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "small", title: "Create a new deploy key" } }}
 
 
 ## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
@@ -27,8 +27,8 @@ from teachablehub.deployments.sklearn import TeachableDeployment
 # ... training logic here ...
 
 deployment = TeachableDeployment(
-    teachable="user/teachable",
-    environment="production",
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_envrionment}}",
     deploy_key="your-deploy-key-here",
 )
 
