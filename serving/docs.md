@@ -129,7 +129,7 @@ You can play around with your teachables via the {{button: { to: "https://serve-
 
 ```bash
 curl -X 'POST' \
-  'https://serve.teachablehub.com/v1/user/teachable/predict/?environment=production' \
+  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
   -H 'X-Serving-Key: your-serving-key' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -143,7 +143,7 @@ curl -X 'POST' \
 
 ```bash
 curl -X 'POST' \
-  'https://serve.teachablehub.com/v1/user/teachable/predict/?environment=production' \
+  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -159,7 +159,7 @@ curl -X 'POST' \
 
 ```bash
 curl -X 'POST' \
-  'https://serve.teachablehub.com/v1/user/teachable/predict/?environment=my-custom-environment&version=3' \
+  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
   -H 'X-Serving-Key: your-serving-key' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -203,7 +203,7 @@ The TeachableHub's Serving API respond with the following HTTP Response codes an
 | Code     |      Message      |
 |-----------|:-------------|
 | 400     |  Bad request for various reasons. For more information read the error messages. |
-| 401     |  You are not authorized to access {environment} environment of {user}/{teachable_name} |
+| 401     |  You are not authorized to access {{deployment_environment}} environment of {{handler}}/{{teachable}} |
 | 403     |  No serving key provided |
 | 422     |  Validation Error |
 | 500     |  Unhandled internal server error. Please open a ticket to report it. |
