@@ -42,7 +42,6 @@ predictions = teachable.predict(features)
 {{#if(!deployment_has_features_sample)}}
 predictions = teachable.predict({{deployment_ndarray_sample}})
 {{/}}
-
 print(predictions)
 ```
 
@@ -58,8 +57,8 @@ print(predictions)
 from teachablehub.clients import TeachableHubPredictAPI
 
 teachable = TeachableHubPredictAPI(
-    teachable="user/teachable",
-    environment="production",
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_environment}}",
     serving_key="your-serving-key-here"
 )
 
@@ -88,13 +87,20 @@ print(predictions)
 from teachablehub.clients import TeachableHubPredictAPI
 
 teachable = TeachableHubPredictAPI(
-    teachable="user/teachable",
-    environment="my-custom-environment",
-    version=3,
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_environment}}",
+    version={{deployment_version}},
     serving_key="your-serving-key-here"
 )
 
-predictions = teachable.predict([[0.03, 0.05]])
+{{#if(deployment_has_features_sample)}}
+features = deployment_features_sample
+
+predictions = teachable.predict(features)
+{{/}}
+{{#if(!deployment_has_features_sample)}}
+predictions = teachable.predict({{deployment_ndarray_sample}})
+{{/}}
 print(predictions)
 ```
 
@@ -111,7 +117,10 @@ The SDK raise the following exceptions:
 
 ## <a id="how-to-predict-rest-api"></a> REST API
 
-You can play around with your teachables via the [Swagger UI](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
+{{serving_api_base_url}}
+
+You can play around with your teachables via the {{button: { to: "https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post", type: "info", size: "small", title: "Swagger UI" } }}
+ or following the examples below.
 
 ### Simple Predictions
 
