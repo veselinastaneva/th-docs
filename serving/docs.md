@@ -166,23 +166,7 @@ curl -X 'POST' \
 With Classes defined:
 
 ```javascript
-{
-  "request_id": "51b5597c-6c12-4559-948f-8a789756af9d",
-  "predictions": [
-    {
-      "className": "Class1",
-      "probability": 0.4830337783311345
-    },
-    {
-      "className": "Class2",
-      "probability": 0.31854067893251076
-    },
-    {
-      "className": "Class3",
-      "probability": 0.1984255427363547
-    }
-  ]
-}
+{{deployment_prediction_result}}
 ```
 
 Wihout Classes defined:
