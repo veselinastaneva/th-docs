@@ -16,7 +16,7 @@ pip install teachablehub
 
 Тук кратка информация за деплоймънт кийс, че служат за деплой на модели, че може да се ограничават по environment за по-добро секюрити и тнт. Добри примери за deployment keys са `production`, `staging`, `backenders-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "success", size: "small", title: "Create a new deploy key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "secondary", size: "normal", title: "Create a new deploy key" } }}
 
 
 ## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
@@ -28,7 +28,7 @@ from teachablehub.deployments.sklearn import TeachableDeployment
 
 deployment = TeachableDeployment(
     teachable="{{handler}}/{{teachable}}",
-    environment="{{deployment_envrionment}}",
+    environment="{{deployment_environment}}",
     deploy_key="your-deploy-key-here",
 )
 
@@ -54,3 +54,8 @@ For more details [checkout the Python SDK on GitHub](https://github.com/teachabl
 ## Advanced Deployment Guide
 
 <br /><br /><br />
+
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "primary", size: "medium", title: "Create a new deploy key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "secondary", size: "normal", title: "Create a new deploy key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "info", size: "normal", title: "Create a new deploy key" } }}
+{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Create a new deploy key" } }}
