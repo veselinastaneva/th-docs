@@ -35,7 +35,7 @@ teachable = TeachableHubPredictAPI(
     serving_key="your-serving-key-here"
 )
 
-predictions = teachable.predict([[0.03, 0.05]])
+predictions = teachable.predict({{deployment_ndarray_sample}})
 print(predictions)
 ```
 
@@ -56,10 +56,7 @@ teachable = TeachableHubPredictAPI(
     serving_key="your-serving-key-here"
 )
 
-features = {
-    "feature_1": 0.03,
-    "feature_2": 0.05
-}
+features = {{deployment_features_sample}}
 
 predictions = teachable.predict(features, order='desc', limit=10, threshold=0.5)
 print(predictions)
