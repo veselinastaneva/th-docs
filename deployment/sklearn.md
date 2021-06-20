@@ -42,7 +42,7 @@ deployment.deploy(
 
 > You can find the full example here: [sklearn-train-deploy.py](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy.py)
 
-If you want know more about the deployment process or all of the features please read the `Advanced Deploymebt Guide` section below.
+If you want know more about the deployment process or all of the features please read the [Advanced Deployment Guide](#advanced-deployment-guide) section below.
 
 <br /><br /><br />
 
