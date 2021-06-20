@@ -19,7 +19,7 @@ pip install teachablehub
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "primary", size: "medium", title: "Create a new deploy key" } }}
 
 
-## <a id="how-to-deploy-examples"></a> 3. Deploy a Model
+### <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
 ```python
 from teachablehub.deployments.sklearn import TeachableDeployment
@@ -51,6 +51,15 @@ For the full list of features and examples checkout the following links:
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Deploy an existing model", margin: "0 5px 0 0" } }}
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Advanced Deployment", margin: "0 5px 0 0" } }}
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Advanced Deployment of Regression model", margin: "0 5px 0 0" } }}
+
+<br /><br /><br />
+
+## Jupyter Environment
+
+Maintaining these deployment samples, you'll recieve free-of-charge Auto-Generated Serving API Documentation, Model Validation you'll be protected from deploying models that are not working as expected, better usage examples for everyone who will integrate the Teachable in every software.
+
+
+{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2Fgetting-started.ipynb", type: "info", size: "medium", title: "Model Deployment for Data Scientists"}}
 
 <br /><br /><br />
 
