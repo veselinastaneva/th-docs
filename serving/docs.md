@@ -147,9 +147,7 @@ curl -X 'POST' \
   -H 'X-Serving-Key: your-serving-key' \
   -H 'Content-Type: application/json' \
   -d '{
-  "features": [
-    {{deployment_features_sample}}
-  ]
+  "features": {{deployment_features_sample}}
 }'
 ```
 
