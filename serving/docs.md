@@ -187,6 +187,8 @@ curl -X 'POST' \
 
 | Param | Type | Values | Default | Description |
 | :---  | :--- | :--- | :--- | :--- |
+| environment     | `string` |  `your-teachable-env` | `production` | към deployment от кой енв ще се прави предикшън  |
+| version     | `int` |  **min**: `0` **max** `2000` | `0` | към коя версия на deployment ще се прави предикшън  |
 | order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
