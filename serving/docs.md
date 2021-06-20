@@ -144,7 +144,7 @@ curl -X 'POST' \
 ```bash
 curl -X 'POST' \
   '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
-  -H 'accept: application/json' \
+  -H 'X-Serving-Key: your-serving-key' \
   -H 'Content-Type: application/json' \
   -d '{
   "features": [
