@@ -105,12 +105,9 @@ Data type allowed for the key value. Can be one of the following names:
 | `boolean`     | [bool](https://#) | [bool](https://#) |
 | `binary`     | bytes, [bytearray](#) | bytes, [bytearray](#) |
 | `date`     | [datetime.date](#) | [datetime.date](#) |
-| `dict`     | [collections.Mapping](#) | [collections.abc.Mapping](#) |
 | `float`     | [float](#) | [float](#) |
 | `integer`     | [int](#), [long](#) | [int](#) |
-| `list`     | [collections.Sequence](#), excl. string | [collections.abc.Sequence](#), excl. string |
 | `number`     | [float](#), [int](#), [long](#), excl. [bool](#) | [float](#), [int](#), excl. [bool](#) |
-| `set`     | [set](#) | [set](#) |
 | `string`     | [basestring()](#) | [str](#) |
 
 
