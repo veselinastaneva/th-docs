@@ -65,6 +65,81 @@ Maintaining these deployment samples, you'll recieve free-of-charge Auto-Generat
 
 Here information about the advanced deployment.
 
+
+### Schema Validation
+
+Deployment schema will enabled the TeachableHub Serving API to accept human readable features and will ensure that they will be validated before they are sent to the model. The schema validation feature will eliminate lots of mistakes and errors when you are working with your Teachable Predict API.
+
+#### Structure
+
+The Deploment Schema contains two parameters `features` and the `ndarray` mapping.
+
+```python
+deployment.schema({
+    "features": {
+        "sepal_length": {"type": "float"},
+        "sepal_width": {"type": "float"},
+        "petal_length": {"type": "float"},
+        "petal_width": {"type": "float"},
+    },
+    "ndarray": [[
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width",
+    ]]
+})
+
+```
+
+More information on how to structure the schema.
+
+### Feature Validation Properties
+
+#### `type`
+
+Data type allowed for the key value. Can be one of the following names:
+
+| Type Name | Python 2 Type | Python 3 Type |
+| :---  | :--- | :--- |
+| `boolean`     | [bool](https://#) | [bool](https://#) |
+| `binary`     | bytes, [bytearray](#) | bytes, [bytearray](#) |
+| `date`     | [datetime.date](#) | [datetime.date](#) |
+| `dict`     | [collections.Mapping](#) | [collections.abc.Mapping](#) |
+| `float`     | [float](#) | [float](#) |
+| `integer`     | [int](#), [long](#) | [int](#) |
+| `list`     | [collections.Sequence](#), excl. string | [collections.abc.Sequence](#), excl. string |
+| `number`     | [float](#), [int](#), [long](#), excl. [bool](#) | [float](#), [int](#), excl. [bool](#) |
+| `set`     | [set](#) | [set](#) |
+| `string`     | [basestring()](#) | [str](#) |
+
+
+#### `min, max`
+
+Minimum and maximum value allowed for any object whose class implements comparison operations (`__gt__` & `__lt__`).
+
+```python
+# Example
+```
+
+#### `minlength`, `maxlength`
+
+Minimum and maximum length allowed for sized types like `int`, `number`, `string`.
+
+```python
+# Example
+```
+
+#### `contains`
+
+This rule validates that the a container object contains all of the defined items.
+
+```python
+# Example
+```
+
+#### 
+
 For the full list of features and examples checkout the following links:
 
 - [Deploy an existing model](https://github.com/teachablehub/python-sdk/blob/master/examples/deploy-existing.py)
