@@ -42,15 +42,7 @@ deployment.deploy(
 
 > You can find the full example here: [sklearn-train-deploy.py](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy.py)
 
-For the full list of features and examples checkout the following links:
-
-- [Deploy an existing model](https://github.com/teachablehub/python-sdk/blob/master/examples/deploy-existing.py)
-- [Advanced Deployment](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-advanced.py)
-- [Advanced Deployment of Regression model](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-regression-advanced.py)
-
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Deploy an existing model", margin: "0 5px 0 0" } }}
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Advanced Deployment", margin: "0 5px 0 0" } }}
-{{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys", type: "grey", size: "small", title: "Advanced Deployment of Regression model", margin: "0 5px 0 0" } }}
+If you want know more about the deployment process or all of the features please read the `Advanced Deploymebt Guide` section below.
 
 <br /><br /><br />
 
@@ -59,12 +51,19 @@ For the full list of features and examples checkout the following links:
 Maintaining these deployment samples, you'll recieve free-of-charge Auto-Generated Serving API Documentation, Model Validation you'll be protected from deploying models that are not working as expected, better usage examples for everyone who will integrate the Teachable in every software.
 
 
-{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2Fgetting-started.ipynb", type: "info", size: "medium", title: "Model Deployment for Data Scientists"}}
+{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2Fgetting-started.ipynb", type: "info", size: "medium", title: "Model Deployment for Data Scientists"} }}
 
 <br /><br /><br />
 
 ## Advanced Deployment Guide
 
 Here information about the advanced deployment.
+
+For the full list of features and examples checkout the following links:
+
+- [Deploy an existing model](https://github.com/teachablehub/python-sdk/blob/master/examples/deploy-existing.py)
+- [Advanced Deployment](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-advanced.py)
+- [Advanced Deployment of Regression model](https://github.com/teachablehub/python-sdk/blob/master/examples/sklearn-train-deploy-regression-advanced.py)
+
 
 <br /><br /><br />
