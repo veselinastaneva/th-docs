@@ -83,6 +83,7 @@ print(predictions)
 
 Тук обясняваме, че понеже поддържаме различни енваирмънти и версии на деплоймънтите може да правим и предикшъни към специфична версия и енваиърмънт.
 
+{{#if(deployment_has_features_sample)}}
 ```python
 from teachablehub.clients import TeachableHubPredictAPI
 
@@ -93,16 +94,28 @@ teachable = TeachableHubPredictAPI(
     serving_key="your-serving-key-here"
 )
 
-{{#if(deployment_has_features_sample)}}
+
 features = {{deployment_features_sample}}
 
 predictions = teachable.predict(features)
-{{/}}
-{{#if(!deployment_has_features_sample)}}
-predictions = teachable.predict({{deployment_ndarray_sample}})
-{{/}}
 print(predictions)
 ```
+{{/}}
+{{#if(!deployment_has_features_sample)}}
+```python
+from teachablehub.clients import TeachableHubPredictAPI
+
+teachable = TeachableHubPredictAPI(
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_environment}}",
+    version={{deployment_version}},
+    serving_key="your-serving-key-here"
+)
+
+predictions = teachable.predict({{deployment_ndarray_sample}})
+print(predictions)
+```
+{{/}}
 
 ### Errors
 
