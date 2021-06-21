@@ -220,6 +220,7 @@ The TeachableHub's Serving API respond with the following HTTP Response codes an
 |-----------|:-------------|
 | 400     |  Bad request for various reasons. For more information read the error messages. |
 | 401     |  You are not authorized to access {{deployment_environment}} environment of {{handler}}/{{teachable}} |
+| 402     |  Request Failed. The parameters were valid but the request failed. |
 | 403     |  No serving key provided |
 | 422     |  Validation Error |
 | 500     |  Unhandled internal server error. Please open a ticket to report it. |
