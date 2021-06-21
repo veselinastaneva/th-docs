@@ -96,7 +96,7 @@ More information on how to structure the schema.
 
 ### Feature Validation Properties
 
-#### `type`
+### `type`
 
 Data type allowed for the key value. Can be one of the following names:
 
@@ -111,15 +111,22 @@ Data type allowed for the key value. Can be one of the following names:
 | `string`     | [basestring()](#) | [str](#) |
 
 
-#### `min, max`
+### `min, max`
 
 Minimum and maximum value allowed for any object whose class implements comparison operations (`__gt__` & `__lt__`).
 
 ```python
-# Example
+deployment.schema({
+    "features": {
+        ...
+        "age":  { "type": "float", "min": -0.1, "max": 0.1 },
+        ...
+    },
+    "ndarray": [["age", "sex", "bmi", "bp", "s1", "s2", "s3", "s4", "s5", "s6"]]
+})
 ```
 
-#### `minlength`, `maxlength`
+### `minlength`, `maxlength`
 
 Minimum and maximum length allowed for sized types like `int`, `number`, `string`.
 
@@ -127,7 +134,7 @@ Minimum and maximum length allowed for sized types like `int`, `number`, `string
 # Example
 ```
 
-#### `contains`
+### `contains`
 
 This rule validates that the a container object contains all of the defined items.
 
@@ -135,7 +142,27 @@ This rule validates that the a container object contains all of the defined item
 # Example
 ```
 
-#### 
+### `help`
+
+**TeachableHub use this rule to generate Docs section automatically where explain what is this feature about.** This is very helpful when your backend team or 3rd-party integrator consume the API, because they will be aware what data they should provide to the Teachable Predict API. 
+
+```python
+deployment.schema({
+    "features": {
+        ...
+        "s1":  {
+            "type": "float", 
+            "max": 0.1, 
+            "min": -0.1,
+            "help": "What is this feature about, where we can get it. how to prepare it, how to generate it?",
+        },
+        ...
+    },
+    "ndarray": [["age", "sex", "bmi", "bp", "s1", "s2", "s3", "s4", "s5", "s6"]]
+})
+```
+
+#### Other
 
 For the full list of features and examples checkout the following links:
 
