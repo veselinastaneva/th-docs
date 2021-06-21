@@ -133,7 +133,7 @@ The SDK raise the following exceptions:
 
 {{serving_api_base_url}}
 
-You can play around with your teachables via the {{button: { to: "https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post", type: "info", size: "small", title: "Swagger UI" } }}
+> You can play around with your teachables via the {{button: { to: "https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post", type: "info", size: "small", title: "Swagger UI" } }}
  or following the examples below.
 
 ### Simple Predictions
@@ -181,7 +181,7 @@ curl -X 'POST' \
 }'
 ```
 
-### Additional Query Params:
+### Query Params:
 
 Със всеки един предикшън към Rest API могат да се подават и следните Query Params
 
@@ -193,28 +193,22 @@ curl -X 'POST' \
 | limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
 
-### Example Responses:
+### Prediction Response
 
-With Classes defined:
+This is a real prediction response of `v{{deployment_version}}` of the `{{handler}}/{{teachable}}`
+
+> Keep in mind that this response can change based on the deployment configuration. To be aware with all the possible prediction responses please visit the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
 
 ```javascript
 {{deployment_prediction_result}}
 ```
 
-Wihout Classes defined:
-
-```javascript
-{
-  "request_id": "e1e22637-0222-43a5-850d-a5640493e952",
-  "predictions": [
-    274.6187975893929
-  ]
-}
-```
-
 ### Errors
 
 The TeachableHub's Serving API respond with the following HTTP Response codes and messages:
+
+> Examples of the Errors Responses you can find at the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
+
 
 | Code     |      Message      |
 |-----------|:-------------|
@@ -222,7 +216,9 @@ The TeachableHub's Serving API respond with the following HTTP Response codes an
 | 401     |  You are not authorized to access {{deployment_environment}} environment of {{handler}}/{{teachable}} |
 | 402     |  Request Failed. The parameters were valid but the request failed. |
 | 403     |  No serving key provided |
+| 409     |  Features Schema Validation Error. |
 | 422     |  Validation Error |
 | 500     |  Unhandled internal server error. Please open a ticket to report it. |
 | 501     |  Not Implemented features or methods. |
+
 
