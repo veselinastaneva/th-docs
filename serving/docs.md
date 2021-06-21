@@ -195,7 +195,7 @@ curl -X 'POST' \
 
 ### Prediction Response
 
-This is a real prediction response of `v{{deployment_version}}` of the `{{handler}}/{{teachable}}`
+This is an actual prediction response of `v{{deployment_version}}` of the `{{handler}}/{{teachable}}`
 
 > Keep in mind that this response can change based on the deployment configuration. To be aware with all the possible prediction responses please visit the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
 
