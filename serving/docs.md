@@ -135,7 +135,6 @@ teachable = TeachableHubPredictAPI(
     serving_key="your-serving-key-here"
 )
 
-
 features = {{deployment_features_sample}}
 
 predictions = teachable.predict(features)
