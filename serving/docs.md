@@ -136,6 +136,21 @@ The SDK raise the following exceptions:
 > You can play around with your teachables via the {{button: { to: "https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post", type: "info", size: "small", title: "Swagger UI" } }}
  or following the examples below.
 
+### Authentication
+
+The TeachableHub's Serving API uses Serving Keys to authenticate your requests. 
+
+Authentication to the Serving API is performed via `X-Serving-Key` header. Provide your Serving Key as the value to this header. 
+
+Example:
+```bash
+    curl -H 'X-Serving-Key: your-serving-key' ...
+```
+
+> All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
+
+{{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys", type: "primary", size: "normal", title: "Manage your Serving Keys" } }}
+
 ### Simple Predictions
 
 Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
@@ -205,7 +220,7 @@ This is an actual prediction response of `v{{deployment_version}}` of the `{{han
 
 ### Errors
 
-The TeachableHub's Serving API respond with the following HTTP Response codes and messages:
+The TeachableHub's Serving API uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a prediction failed, etc.). Codes in the 5xx range indicate an error with the TeachableHub's Serving API servers (these are rare).
 
 > Examples of the Errors Responses you can find at the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
 
