@@ -140,60 +140,9 @@ The SDK raise the following exceptions:
 
 The TeachableHub's Serving API uses Serving Keys to authenticate your requests. Authentication to the Serving API is performed via `X-Serving-Key` header. Provide your Serving Key as the value to this header.
 
-**Example**:
-
-```bash
-    curl -H 'X-Serving-Key: your-serving-key' ...
-```
-
-> All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
+All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys", type: "primary", size: "normal", title: "Manage your Serving Keys" } }}
-
-### Simple Predictions
-
-Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
-
-
-```bash
-curl -X 'POST' \
-  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
-  -H 'X-Serving-Key: your-serving-key' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "ndarray": {{deployment_ndarray_sample}}
-}'
-```
-
-### Advanced predictions with Features Validation
-
-Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
-
-```bash
-curl -X 'POST' \
-  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
-  -H 'X-Serving-Key: your-serving-key' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "features": [
-    {{deployment_features_sample}}
-   ]
-}'
-```
-
-### Making Predictions on specific deployment version
-
-Тук обясняваме, че понеже поддържаме различни енваирмънти и версии на деплоймънтите може да правим и предикшъни към специфична версия и енваиърмънт.
-
-```bash
-curl -X 'POST' \
-  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
-  -H 'X-Serving-Key: your-serving-key' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "ndarray": {{deployment_ndarray_sample}}
-}'
-```
 
 ### Query Params:
 
@@ -206,6 +155,36 @@ curl -X 'POST' \
 | order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+
+### Making Prediction Requests
+
+Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
+
+{{#if(deployment_has_features_sample)}}
+```bash
+curl -X 'POST' \
+  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
+  -H 'X-Serving-Key: your-serving-key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "features": [
+    {{deployment_features_sample}}
+   ]
+}'
+```
+{{/}}
+
+{{#if(!deployment_has_features_sample)}}
+```bash
+curl -X 'POST' \
+  '{{serving_api_base_url}}/{{handler}}/{{teachable}}/predict/?environment={{deployment_environment}}&version={{deployment_version}}' \
+  -H 'X-Serving-Key: your-serving-key' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "ndarray": {{deployment_ndarray_sample}}
+}'
+```
+{{/}}
 
 ### Prediction Response
 
