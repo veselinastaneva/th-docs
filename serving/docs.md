@@ -138,11 +138,10 @@ The SDK raise the following exceptions:
 
 ### Authentication
 
-The TeachableHub's Serving API uses Serving Keys to authenticate your requests. 
+The TeachableHub's Serving API uses Serving Keys to authenticate your requests. Authentication to the Serving API is performed via `X-Serving-Key` header. Provide your Serving Key as the value to this header.
 
-Authentication to the Serving API is performed via `X-Serving-Key` header. Provide your Serving Key as the value to this header. 
+**Example**:
 
-Example:
 ```bash
     curl -H 'X-Serving-Key: your-serving-key' ...
 ```
