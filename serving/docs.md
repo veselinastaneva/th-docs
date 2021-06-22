@@ -41,6 +41,7 @@ predictions = teachable.predict(features)
 print(predictions)
 ```
 {{/}}
+
 {{#if(!deployment_has_features_sample)}}
 ```python
 from teachablehub.clients import TeachableHubPredictAPI
