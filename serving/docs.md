@@ -226,7 +226,7 @@ The TeachableHub's Serving API uses conventional HTTP response codes to indicate
 
 | Code     |      Message      |
 |-----------|:-------------|
-| 400     |  Bad request for various reasons. For more information read the error messages. |
+| 400     |  Bad request. There are several different error titles returned for 400 errors, which will return an explanation in the “detail” field. |
 | 401     |  You are not authorized to access {{deployment_environment}} environment of {{handler}}/{{teachable}} |
 | 402     |  Request Failed. The parameters were valid but the request failed. |
 | 403     |  No serving key provided |
