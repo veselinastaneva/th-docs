@@ -136,6 +136,8 @@ The SDK raise the following exceptions:
 > You can play around with your teachables via the {{button: { to: "https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post", type: "info", size: "small", title: "Swagger UI" } }}
  or following the examples below.
 
+<br />
+
 ## Authentication
 
 The TeachableHub's Serving API uses Serving Keys to authenticate your requests. Authentication to the Serving API is performed via `X-Serving-Key` header. Provide your Serving Key as the value to this header.
@@ -143,6 +145,8 @@ The TeachableHub's Serving API uses Serving Keys to authenticate your requests. 
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys", type: "primary", size: "normal", title: "Manage your Serving Keys" } }}
+
+<br />
 
 ## Query Params:
 
@@ -155,6 +159,8 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 | order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+
+<br />
 
 ## Making Prediction Requests
 
@@ -184,6 +190,8 @@ curl -X 'POST' \
 ```
 {{/}}
 
+<br />
+
 ## Prediction Response
 
 This is an actual prediction response of `v{{deployment_version}}` of the `{{handler}}/{{teachable}}`
@@ -193,6 +201,7 @@ This is an actual prediction response of `v{{deployment_version}}` of the `{{han
 ```javascript
 {{deployment_prediction_result}}
 ```
+<br />
 
 ## Errors
 
