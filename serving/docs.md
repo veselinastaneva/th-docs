@@ -25,7 +25,7 @@ pip install teachablehub
 
 Тук трябва да обишем, че на всеки един деплойнът модел без никаква допълнителна настройка може да се правят тези ndarray predictions. 
 
-
+{{#if(deployment_has_features_sample)}}
 ```python
 from teachablehub.clients import TeachableHubPredictAPI
 
@@ -34,22 +34,33 @@ teachable = TeachableHubPredictAPI(
     environment="{{deployment_environment}}",
     serving_key="your-serving-key-here"
 )
-{{#if(deployment_has_features_sample)}}
+
 features = {{deployment_features_sample}}
 
 predictions = teachable.predict(features)
-{{/}}
-{{#if(!deployment_has_features_sample)}}
-predictions = teachable.predict({{deployment_ndarray_sample}})
-{{/}}
 print(predictions)
 ```
+{{/}}
+{{#if(!deployment_has_features_sample)}}
+```python
+from teachablehub.clients import TeachableHubPredictAPI
+
+teachable = TeachableHubPredictAPI(
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_environment}}",
+    serving_key="your-serving-key-here"
+)
+
+predictions = teachable.predict({{deployment_ndarray_sample}})
+print(predictions)
+```
+{{/}}
 
 <br/><br/>
 
-## Advanced Predictions Guide
+# Advanced Predictions Guide
 
-### Advanced predictions with Features Validation
+## Advanced predictions with Features Validation
 
 Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
 
@@ -68,7 +79,7 @@ predictions = teachable.predict(features, order='desc', limit=10, threshold=0.5)
 print(predictions)
 ```
 
-#### `.predict()` Additional Params:
+### `.predict()` Additional Params:
 
 Със всеки един предикшън могат да се добавят и следните Params. Те рабоят за Teachables с дефинирани classes.
 
@@ -79,7 +90,7 @@ print(predictions)
 | threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
 
 
-### Making Predictions on specific deployment version
+## Making Predictions on specific deployment version
 
 Тук обясняваме, че понеже поддържаме различни енваирмънти и версии на деплоймънтите може да правим и предикшъни към специфична версия и енваиърмънт.
 
@@ -118,7 +129,7 @@ print(predictions)
 ```
 {{/}}
 
-### Errors
+## Errors
 
 The SDK raise the following exceptions:
 
