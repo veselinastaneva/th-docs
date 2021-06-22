@@ -129,14 +129,14 @@ The SDK raise the following exceptions:
 | `UnsuccessfulRequestError`     |  General Serving API errors 4xx and 5xx |
 | `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
-## <a id="how-to-predict-rest-api"></a> REST API
+# <a id="how-to-predict-rest-api"></a> REST API
 
 {{serving_api_base_url}}
 
 > You can play around with your teachables via the {{button: { to: "https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post", type: "info", size: "small", title: "Swagger UI" } }}
  or following the examples below.
 
-### Authentication
+## Authentication
 
 The TeachableHub's Serving API uses Serving Keys to authenticate your requests. Authentication to the Serving API is performed via `X-Serving-Key` header. Provide your Serving Key as the value to this header.
 
@@ -144,7 +144,7 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys", type: "primary", size: "normal", title: "Manage your Serving Keys" } }}
 
-### Query Params:
+## Query Params:
 
 Със всеки един предикшън към Rest API могат да се подават и следните Query Params
 
@@ -156,7 +156,7 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 | limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
 | threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
 
-### Making Prediction Requests
+## Making Prediction Requests
 
 Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
 
@@ -184,7 +184,7 @@ curl -X 'POST' \
 ```
 {{/}}
 
-### Prediction Response
+## Prediction Response
 
 This is an actual prediction response of `v{{deployment_version}}` of the `{{handler}}/{{teachable}}`
 
@@ -194,7 +194,7 @@ This is an actual prediction response of `v{{deployment_version}}` of the `{{han
 {{deployment_prediction_result}}
 ```
 
-### Errors
+## Errors
 
 The TeachableHub's Serving API uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a prediction failed, etc.). Codes in the 5xx range indicate an error with the TeachableHub's Serving API servers (these are rare).
 
