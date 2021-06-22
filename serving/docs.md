@@ -63,7 +63,33 @@ print(predictions)
 
 # Advanced Predictions Guide
 
-## Advanced predictions with Features Validation
+## Predictions on the Latest Version
+
+text
+
+```python
+teachable = TeachableHubPredictAPI(
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_environment}}",
+    serving_key="your-serving-key-here"
+)
+```
+
+## Predictions on a Specific Version
+
+text
+
+```python
+teachable = TeachableHubPredictAPI(
+    teachable="{{handler}}/{{teachable}}",
+    environment="{{deployment_environment}}",
+    version={{deployment_version}},
+    serving_key="your-serving-key-here"
+)
+```
+
+
+## Predictions with the Features Dict
 
 Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
 
@@ -73,6 +99,7 @@ from teachablehub.clients import TeachableHubPredictAPI
 teachable = TeachableHubPredictAPI(
     teachable="{{handler}}/{{teachable}}",
     environment="{{deployment_environment}}",
+    version={{deployment_version}},
     serving_key="your-serving-key-here"
 )
 
