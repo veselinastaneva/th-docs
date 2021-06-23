@@ -224,7 +224,7 @@ This is the final step of the required deployment steps, you are almost there :)
 
 ```
 deployment.deploy(
-    summary="What is this deployment about ..."), # required
+    summary="What is this deployment about", # required
     description="You can use it as changelog.", # optional
     activate=True # optional, defualt: false
 )
