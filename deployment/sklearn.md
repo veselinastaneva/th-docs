@@ -221,7 +221,7 @@ deployment.deploy(
 
 The are couple of useful functions that can help you when you are automating your model deployment in your CI/CD systems.
 
-## `.successful()`
+### `.successful()`
 
 The `successful` method return a boolen result whether or not the deployment is created on the TeachableHub platform. Please keed in mind that the deployment need to be verfied successfuly as well in order to be served by the TeachableHub's Serving API.
 
@@ -230,7 +230,7 @@ if deployment.successful():
     notify_the_team_on_slack(deployment_version=deployment.version())
 ```
 
-## `.verified(reload=False)`
+### `.verified(reload=False)`
 
 After every deployment based on your `.samples({...})` explained above, TeachableHub is verifing whether or not the deployment is configured correctly and woking as expected.
 
@@ -244,7 +244,7 @@ for check in range(10):
 ```
 
 
-## Retrieving existing Deployment
+### Retrieving existing Deployment
 
 TODO: to make it work no existing deployments, for example before the first deployment in any of the environments.
 
@@ -260,7 +260,7 @@ deployment = TeachableDeployment(
 
 ```
 
-## `.reload()`
+### `.reload()`
 
 This option is to retrieve the latest updated deployment state from the TeachableHub platform.
 
@@ -268,7 +268,7 @@ This option is to retrieve the latest updated deployment state from the Teachabl
 deployment.reload()
 ```
 
-## `.object()`
+### `.object()`
 
 Using the raw deployment object from the TeachableHub API.
 
@@ -276,7 +276,7 @@ Using the raw deployment object from the TeachableHub API.
 deployment.object()
 ```
 
-## `.version()`
+### `.version()`
 
 The version as an integer of the current deployment object.
 
@@ -284,7 +284,7 @@ The version as an integer of the current deployment object.
 deployment.version()
 ```
 
-## `.activate()`
+### `.activate()`
 
 Make the current deployment the latest version for it's environment. Important note, the current deployment should be successfuly verified to be activated.
 
@@ -292,7 +292,7 @@ Make the current deployment the latest version for it's environment. Important n
 deployment.activate()
 ```
 
-## `.rollback()`
+### `.rollback()`
 
 Revert to this deployment as you latest version of the environment this deployment was deployed.
 
