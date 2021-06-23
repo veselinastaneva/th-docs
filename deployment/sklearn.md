@@ -217,6 +217,90 @@ deployment.deploy(
 )
 ```
 
+## CI/CD Automations Helpers
+
+The are couple of useful functions that can help you when you are automating your model deployment in your CI/CD systems.
+
+## `.successful()`
+
+The `successful` method return a boolen result whether or not the deployment is created on the TeachableHub platform. Please keed in mind that the deployment need to be verfied successfuly as well in order to be served by the TeachableHub's Serving API.
+
+```python
+if deployment.successful():
+    notify_the_team_on_slack(deployment_version=deployment.version())
+```
+
+## `.verified(reload=False)`
+
+After every deployment based on your `.samples({...})` explained above, TeachableHub is verifing whether or not the deployment is configured correctly and woking as expected.
+
+The `reload` option is to retrieve the latest updated deployment state from the TeachableHub platform.
+
+```python
+for check in range(10):
+    if deployment.verified(reload=True):
+        deployment.activate()
+        new_release_slack_notification(deployment_version=deployment.version())
+```
+
+
+## Retrieving existing Deployment
+
+TODO: to make it work no existing deployments, for example before the first deployment in any of the environments.
+
+In this example will give you the deployment v10 of the production environment. So you can apply all the helpers methods on it.
+
+```python
+deployment = TeachableDeployment(
+    teachable="{{handler}}/{{teachable}}",
+    environment="production",
+    version="10",
+    deploy_key="your-deploy-key-here",
+)
+
+```
+
+## `.reload()`
+
+This option is to retrieve the latest updated deployment state from the TeachableHub platform.
+
+```python
+deployment.reload()
+```
+
+## `.object()`
+
+Using the raw deployment object from the TeachableHub API.
+
+```python
+deployment.object()
+```
+
+## `.version()`
+
+The version as an integer of the current deployment object.
+
+```python
+deployment.version()
+```
+
+## `.activate()`
+
+Make the current deployment the latest version for it's environment. Important note, the current deployment should be successfuly verified to be activated.
+
+```python
+deployment.activate()
+```
+
+## `.rollback()`
+
+Revert to this deployment as you latest version of the environment this deployment was deployed.
+
+```python
+deployment.rollback()
+```
+
+
 ### Other
 
 For the full list of features and examples checkout the following links:
