@@ -114,6 +114,7 @@ print(predictions)
 {{/}}
 
 {{#if(!deployment_has_features_sample)}}
+
 **This deployment doesn't support Developer Friendly Predictions** to configure them, please take a look at the `Schema & Features Validation` section of the Deployment docs. If you do it, your developers will love you and you'll be their superhero :)
 
 Until then, you can work with your teachable this way.
@@ -131,6 +132,7 @@ teachable = TeachableHubPredictAPI(
 predictions = teachable.predict({{deployment_ndarray_sample}})
 print(predictions)
 ```
+
 {{/}}
 
 ### `.predict(ndarray_or_features, **kwargs)`
