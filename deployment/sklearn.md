@@ -92,7 +92,20 @@ deployment.schema({
 
 ```
 
-More information on how to structure the schema.
+**How to structure** the `ndarray` in the deployment schema. Structuring the this filed actually is very simple task. As a sklearn user and model creator you know that at the end of the day we should provide ndarray with some numbers there. The logic here is the following, where I should place the `sepal_length` feature from the request into the `ndarray` in the `model.predict` method. In this case `sepal_length` is the `0` item in the array we send to the `model.predict` method. Here is the example:
+
+```python
+
+# What we have in the request (they can be in different order)
+{"features": {"sepal_length": 3, "sepal_width": 1, "petal_length": 2 "petal_width": 4} }
+
+#Our ndarray map look like this / We ensure the same order every time.
+"ndarray": [["sepal_length", "sepal_width", "petal_length", "petal_width" ]]
+
+# What TeachableHub will do automatically
+prediction = model.predict([[3,1,2,4]])
+
+```
 
 ### Feature Validation Properties
 
