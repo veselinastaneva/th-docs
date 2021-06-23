@@ -246,8 +246,6 @@ for check in range(10):
 
 ### Retrieving existing Deployment
 
-TODO: to make it work no existing deployments, for example before the first deployment in any of the environments.
-
 In this example will give you the deployment v10 of the production environment. So you can apply all the helpers methods on it.
 
 ```python
@@ -301,7 +299,7 @@ deployment.rollback()
 ```
 
 
-### Other
+### Other Examples
 
 For the full list of features and examples checkout the following links:
 
