@@ -66,7 +66,7 @@ Maintaining these deployment samples, you'll recieve free-of-charge Auto-Generat
 Here information about the advanced deployment.
 
 
-### Schema Validation
+### Schema Validation (optional, recommended)
 
 Deployment schema will enabled the TeachableHub Serving API to accept human readable features and will ensure that they will be validated before they are sent to the model. The schema validation feature will eliminate lots of mistakes and errors when you are working with your Teachable Predict API.
 
@@ -162,7 +162,62 @@ deployment.schema({
 })
 ```
 
-#### Other
+### Model Classes (optional)
+
+The TeachableHub's Auto-Generated Serving API will use these classes in the predictions results to return human readable predictions outputs. If classes configured for the deployment the Scikit-Learn will use the `predict_proba` method, if not it will use the regular `predict` method.
+
+```python
+deployment.classes({"0": "Setosa", "1": "Versicolour", "2": "Virginica" })
+```
+
+### Usage Samples (required)
+
+Maintaining these deployment samples, you'll recieve free-of-charge Auto-Generated Serving API Documentation, Model Validation you'll be protected from deploying models that are not working as expected, better usage examples for everyone who will integrate the Teachable in every software. These examples will be used in the `PredictMan` as well. At least one of `ndarray` or `features` is required. if your `Teachable` is using the `Features Validation` feature both are required.
+
+```python
+deployment.samples(
+    ndarray=[X_train[0]],
+    features={"sepal_length": 5.1, "sepal_width": 3.5, "petal_length": 1.4, "petal_width": 0.2 }
+)
+```
+
+### Deployment Context (optional)
+
+When you need to add useful information that will bring more transparency for the whole team about the training environment, versioning of the dataset, versions of the packages in the environment deploying the model, servers and etc. or Easly tracking of changes, version of the training data or environment where the deployment was made. All of this helps you with the reproducing the models every time.
+
+```
+deployment.context({
+    "author": "John Doe",
+    "github_commit": "9e91a9d16eecf9e44935788ea777549de4377408",
+    "dataset_version": "777549de4377408",
+    "notebook": "https://deepnote.com/project/TeachableHubExample-Aw22ds202js0/%2Fgetting-started.ipynb",
+    "scikit-learn": sklearn_version,
+    "python": platform.python_version(),
+    "local_hostname": platform.node(),
+    "os_info": platform.version()
+})
+```
+
+### Deployment Deploy (required)
+
+This is the final step of the required deployment steps, you are almost there :) Here are two important things to do:
+
+> `summary` - Like the git commit messages it's always great when you have some details about the deployment that will help you to rollback or refer to it.
+
+> `description` - You can change it from the TeachableHub UI as well. The description can be used as changelog when needed. What are the new stuff of this model deployment. This is probably very helpful for the engineers that are integrating the Serving APIs or maintaining the platforms using this Teachable.
+
+> `activate` - This option will set your new deployed model as the latest version of the environment it's deployed. This is dangerous to do it in the production environment directly but should be entirely okay for the experimentation or staning environments.
+
+
+```
+deployment.deploy(
+    summary="What is this deployment about ..."), # required
+    description="You can use it as changelog.", # optional
+    activate=True # optional, defualt: false
+)
+```
+
+### Other
 
 For the full list of features and examples checkout the following links:
 
