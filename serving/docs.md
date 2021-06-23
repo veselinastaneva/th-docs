@@ -63,21 +63,9 @@ print(predictions)
 
 # Advanced Predictions Guide
 
-## Predictions on the Latest Version
+## This Version Predictions
 
-text
-
-```python
-teachable = TeachableHubPredictAPI(
-    teachable="{{handler}}/{{teachable}}",
-    environment="{{deployment_environment}}",
-    serving_key="your-serving-key-here"
-)
-```
-
-## Predictions on a Specific Version
-
-text
+When you want to work with a specific deployment version. This is useful when you want to test with a oldest version or when you want to improve the security and to have more control of what will be used in the software when this teachable is integrated it. 
 
 ```python
 teachable = TeachableHubPredictAPI(
@@ -89,42 +77,23 @@ teachable = TeachableHubPredictAPI(
 ```
 
 
-## Predictions with the Features Dict
+## Latest Version Predictions
 
-Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
+In cases when you want to use always latest and greatest version this is the best approach. By not specifying any version the teachable will always return predictions from the latest model deployed in the specific environment. This is recommended and very helpful when you are automating your deployment pipeline.
 
 ```python
-from teachablehub.clients import TeachableHubPredictAPI
-
 teachable = TeachableHubPredictAPI(
     teachable="{{handler}}/{{teachable}}",
     environment="{{deployment_environment}}",
-    version={{deployment_version}},
     serving_key="your-serving-key-here"
 )
-
-features = {{deployment_features_sample}}
-
-predictions = teachable.predict(features, order='desc', limit=10, threshold=0.5)
-print(predictions)
 ```
 
-### `.predict(ndarray_or_features, **kwargs)`
 
-The `teachable.predict` method can work both with ndarrays (as well as np.ndarray) and features dict. In order to make much more useful it has support of couple additional kwargs that will eliminate some boring tasks for you when working with the classification models.
+## Developer Friendly Predictions
 
-#### Params/Kwargs:
+As Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is everyday job. Using the `Features Validation` feature of TeachableHub is the connection between these two worlds.
 
-| Param | Type | Values | Default | Description |
-| :---  | :--- | :--- | :--- | :--- |
-| order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
-
-
-## Making Predictions on specific deployment version
-
-Тук обясняваме, че понеже поддържаме различни енваирмънти и версии на деплоймънтите може да правим и предикшъни към специфична версия и енваиърмънт.
 
 {{#if(deployment_has_features_sample)}}
 ```python
@@ -145,6 +114,10 @@ print(predictions)
 {{/}}
 
 {{#if(!deployment_has_features_sample)}}
+**This deployment doesn't support Developer Friendly Predictions** to configure them, please take a look at the `Schema & Features Validation` section of the Deployment docs. If you do it, your developers will love you and you'll be their superhero :)
+
+Until then, you can work with your teachable this way.
+
 ```python
 from teachablehub.clients import TeachableHubPredictAPI
 
@@ -159,6 +132,19 @@ predictions = teachable.predict({{deployment_ndarray_sample}})
 print(predictions)
 ```
 {{/}}
+
+### `.predict(ndarray_or_features, **kwargs)`
+
+The `teachable.predict` method can work both with ndarrays (as well as np.ndarray) and features dict. In order to make much more useful it has support of couple additional kwargs that will eliminate some boring tasks for you when working with the classification models.
+
+#### Params/kwargs:
+
+| Param | Type | Values | Default | Description |
+| :---  | :--- | :--- | :--- | :--- |
+| order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
+| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+
 
 ## Errors
 
