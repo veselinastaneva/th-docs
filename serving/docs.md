@@ -109,9 +109,11 @@ predictions = teachable.predict(features, order='desc', limit=10, threshold=0.5)
 print(predictions)
 ```
 
-### `.predict(ndarray_or_features, **kwargs)` Additional Params:
+### `.predict(ndarray_or_features, **kwargs)`
 
 The `teachable.predict` method can work both with ndarrays (as well as np.ndarray) and features dict. In order to make much more useful it has support of couple additional kwargs that will eliminate some boring tasks for you when working with the classification models.
+
+#### Params/Kwargs:
 
 | Param | Type | Values | Default | Description |
 | :---  | :--- | :--- | :--- | :--- |
