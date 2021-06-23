@@ -66,9 +66,11 @@ Maintaining these deployment samples, you'll recieve free-of-charge Auto-Generat
 Here information about the advanced deployment.
 
 
-### Schema Validation (optional, recommended)
+### Schema & Features Validation (optional, recommended)
 
-Deployment schema will enabled the TeachableHub Serving API to accept human readable features and will ensure that they will be validated before they are sent to the model. The schema validation feature will eliminate lots of mistakes and errors when you are working with your Teachable Predict API.
+As Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is everyday job. Configuring this is the connection between these two worlds, plus you'll recieve tons of other benefits for free.
+
+Deployment schema will enabled the TeachableHub Serving API to accept human readable features and will ensure that they will be validated before they are sent to the model. The schema validation feature will eliminate lots of mistakes and errors when you are working with your Teachable Predict API and will generate better documentation free of charge.
 
 #### Structure
 
