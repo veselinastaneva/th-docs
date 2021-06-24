@@ -92,12 +92,11 @@ Data type allowed for the key value. Can be one of the following names:
 
 | Type Name | Python 2 Type | Python 3 Type |
 | :---  | :--- | :--- |
-| `boolean`     | [bool](https://#) | [bool](https://#) |
-| `date`     | [datetime.date](#) | [datetime.date](#) |
 | `float`     | [float](#) | [float](#) |
 | `integer`     | [int](#), [long](#) | [int](#) |
 | `number`     | [float](#), [int](#), [long](#), excl. [bool](#) | [float](#), [int](#), excl. [bool](#) |
 | `string`     | [basestring()](#) | [str](#) |
+| `date`     | [datetime.date](#) | [datetime.date](#) |
 
 
 ### `min, max`
