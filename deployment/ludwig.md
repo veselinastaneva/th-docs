@@ -176,16 +176,16 @@ When you need to add useful information that will bring more transparency for th
 
 ```
 deployment.context({
-    "author": "John Doe",
+    "branch": "main",
     "github_commit": "9e91a9d16eecf9e44935788ea777549de4377408",
-    "dataset_version": "777549de4377408",
-    "notebook": "https://deepnote.com/project/TeachableHubExample-Aw22ds202js0/%2Fgetting-started.ipynb",
-    "scikit-learn": sklearn_version,
+    "dataset_path": "/examples_data/ludwig/bbc-text-v23.csv",
+    "deploy_script": "/ci/train-deploy-ludwig.py",
+    "ludwig": LUDWIG_VERSION,
     "python": platform.python_version(),
     "local_hostname": platform.node(),
     "os_info": platform.version()
-})
-```
+
+})```
 
 ### Deployment Deploy (required)
 
