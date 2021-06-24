@@ -305,12 +305,12 @@ Make the current deployment the latest version for it's environment. Important n
 deployment.activate()
 ```
 
-### `.rollback()`
+### `.rollback(version)`
 
 Revert to this deployment as you latest version of the environment this deployment was deployed.
 
 ```python
-deployment.rollback()
+deployment.rollback(10)
 ```
 
 
