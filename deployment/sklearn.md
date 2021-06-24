@@ -111,6 +111,10 @@ prediction = model.predict([[3,1,2,4]])
 
 ### Feature Validation Properties
 
+### `required_all`
+
+Note that **all the features** defined in the Validation Schema are **required by default**.
+
 ### `type`
 
 Data type allowed for the key value. Can be one of the following names:
@@ -137,24 +141,24 @@ deployment.schema({
         "age":  { "type": "float", "min": -0.1, "max": 0.1 },
         ...
     },
-    "ndarray": [["age", "sex", "bmi", "bp", "s1", "s2", "s3", "s4", "s5", "s6"]]
+    ...
 })
 ```
 
 ### `minlength`, `maxlength`
 
-Minimum and maximum length allowed for sized types like `int`, `number`, `string`.
+Minimum and maximum length allowed for sized types like `string`, `list` and the other sized types that implement `__len__`.
 
 ```python
-# Example
-```
+deployment.schema({
+    "features": {
+        ...
+        "long_text":  { "type": "string", "minlength": 500},
+        ...
+    },
+    ...
+})
 
-### `contains`
-
-This rule validates that the a container object contains all of the defined items.
-
-```python
-# Example
 ```
 
 ### `help`
@@ -173,7 +177,7 @@ deployment.schema({
         },
         ...
     },
-    "ndarray": [["age", "sex", "bmi", "bp", "s1", "s2", "s3", "s4", "s5", "s6"]]
+    ...
 })
 ```
 
