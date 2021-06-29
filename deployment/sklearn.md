@@ -22,9 +22,15 @@ pip install teachablehub
 ### <a id="how-to-deploy-examples"></a> 3. Deploy a Model
 
 ```python
+from sklearn import svm
+from sklearn import datasets
+
 from teachablehub.deployments.sklearn import TeachableDeployment
 
-# ... training logic here ...
+clf = svm.SVC(gamma='scale', probability=True)
+iris = datasets.load_iris()
+X, y = iris.data, iris.target
+clf.fit(X, y)
 
 deployment = TeachableDeployment(
     teachable="{{handler}}/{{teachable}}",
@@ -33,7 +39,7 @@ deployment = TeachableDeployment(
 )
 
 deployment.model(clf)
-deployment.samples(ndarray=[X_train[0]])
+deployment.samples(ndarray=[X[0]])
 deployment.deploy(
     summary="Automatic deployment from our CI via sklearn-train-deploy.py",
     activate=True
