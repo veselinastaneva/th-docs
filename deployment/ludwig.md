@@ -54,6 +54,26 @@ If you want know more about the deployment process or all of the features please
 <br /><br /><br />
 
 
+## Model Deployment for Data Scientists
+
+We know that Jupyter Notebook is your favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready to use basic but powerful DeepNote workflow combining your Experimentation and Deployment process in just 2 simple steps.
+
+Designed with simplicity in mind, you'll recieve free-of-charge Auto-Generated Serving API Documentation, Model Validation you'll be protected from deploying models that are not working as expected, better usage examples for everyone who will integrate the Teachable in every software.
+
+### The Notebook Benefits
+
+- Minimal Setup (less than 5 minutes)
+- Automated & Scheduled Deployments (Retrain and Deploy every day or week)
+- Environment Variables Support (Improved flexibility and security)
+- Deployment Verifications
+- Auto-Generated Serving API Documentation
+- Easy Teachable Cloud Predictions
+- and more.
+
+{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2F1_getting-started-ludwig.ipynb", type: "info", size: "medium", title: "Explore the Jupyter Notebook Environment on Deepnote"} }}
+
+<br /><br /><br />
+
 ## Advanced Deployment Guide
 
 Here information about the advanced deployment.
