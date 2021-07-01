@@ -68,7 +68,7 @@ Designed with simplicity in mind, you'll recieve free-of-charge Auto-Generated S
 - Easy Teachable Cloud Predictions
 - and more.
 
-{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2Fgetting-started.ipynb", type: "info", size: "medium", title: "Explore the Jupyter Notebook Environment on Deepnote"} }}
+{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2F0_getting-started-sklearn.ipynb", type: "info", size: "medium", title: "Explore the Jupyter Notebook Environment on Deepnote"} }}
 
 <br /><br /><br />
 
