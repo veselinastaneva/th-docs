@@ -54,7 +54,7 @@ If you want know more about the deployment process or all of the features please
 
 ## Model Deployment for Data Scientists
 
-We know that Jupyter Notebook is your favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready to use basic but powerful DeepNote workflow combining your Experimentation and Deployment process in just 3 simple steps.
+We know that Jupyter Notebook is your favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready to use basic but powerful DeepNote workflow combining your Experimentation and Deployment process in just 2 simple steps.
 
 Designed with simplicity in mind, you'll recieve free-of-charge Auto-Generated Serving API Documentation, Model Validation you'll be protected from deploying models that are not working as expected, better usage examples for everyone who will integrate the Teachable in every software.
 
