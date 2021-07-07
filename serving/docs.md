@@ -159,7 +159,8 @@ The SDK raise the following exceptions:
 | `UnsuccessfulRequestError`     |  General Serving API errors 4xx and 5xx |
 | `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
-# <a id="how-to-predict-rest-api"></a> REST API
+<a id="how-to-predict-rest-api"></a>
+# REST API
 
 {{serving_api_base_url}}
 
