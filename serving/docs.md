@@ -64,7 +64,7 @@ print(predictions)
 
 <br/><br/>
 
-# Advanced Predictions Guide
+# <a id="advanced-prediction-guide"></a> Advanced Predictions Guide
 
 We have enriched the Serving process, so you can manage easily and have a variety of options.  
 
@@ -164,10 +164,8 @@ The SDK raise the following exceptions:
 | `UnsuccessfulRequestError`     |  General Serving API errors 4xx and 5xx |
 | `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
-<a id="how-to-predict-rest-api"></a>
-# REST API
 
-{{serving_api_base_url}}
+# <a id="how-to-predict-rest-api"></a> REST API
 
 > You can play around with your teachables via the [TeachbaleHub's Serving API Swagger UI](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
 
