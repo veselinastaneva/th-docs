@@ -58,7 +58,7 @@ If you want know more about the deployment process or all of the features please
 <br /><br /><br />
 
 
-## Model Deployment for Data Scientists
+## <a id="jupyter-notebook-environment"></a> Model Deployment for Data Scientists
 
 We know that Jupyter Notebook is your favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready-to-use basic but powerful DeepNote workflow combining the Experimentation and Deployment process in just 2 simple steps.
 
@@ -78,7 +78,7 @@ Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge 
 
 <br /><br /><br />
 
-## Advanced Deployment Guide
+## <a id="advanced-deployment-guide"></a> Advanced Deployment Guide
 
 We have enriched the Deployment with many options to ensure a seamless and clear process.  
 
@@ -96,7 +96,7 @@ The schema validation feature eliminates any involuntary mistakes and errors whe
 
 #### Structure
 
-The Deploment Schema contains two parameters `features` and the `ndarray` mapping.
+The Deploment Schema contains the `features` parameter.
 
 ```python
 deployment.schema({
@@ -201,7 +201,7 @@ deployment.samples(
 
 Deployment Context is quite useful for the time when you need to add some information that **brings more transparency for the whole team** about the training environment, versioning of the dataset, versions of the packages in the model deployment environment, servers and etc. It's also effective for easily tracking changes, version of the training data, or environments where the deployment was made. All of this helps you with reproducing the models every time.
 
-```
+```python
 deployment.context({
     "branch": "main",
     "github_commit": "9e91a9d16eecf9e44935788ea777549de4377408",
@@ -211,8 +211,8 @@ deployment.context({
     "python": platform.python_version(),
     "local_hostname": platform.node(),
     "os_info": platform.version()
-
-})```
+})
+```
 
 ### Deployment Deploy (required)
 
@@ -233,7 +233,7 @@ deployment.deploy(
 )
 ```
 
-## CI/CD Automations Helpers
+## <a id="ci-cd-automation-helpers"></a> CI/CD Automations Helpers
 
 Here are a couple of useful functions that can assist in automating your model deployment in your CI/CD systems.
 
@@ -315,7 +315,7 @@ deployment.rollback(10)
 ```
 
 
-### Other Examples
+### <a id="other-examples"></a> Other Examples
 
 For the full list of features and examples checkout the following links:
 
