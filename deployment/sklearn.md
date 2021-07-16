@@ -222,7 +222,7 @@ deployment.samples(
 
 Deployment Context is quite useful for the time when you need to add some information that **brings more transparency for the whole team** about the training environment, versioning of the dataset, versions of the packages in the model deployment environment, servers and etc. It's also effective for easily tracking changes, version of the training data, or environments where the deployment was made. All of this helps you with reproducing the models every time.
 
-```
+```python
 deployment.context({
     "author": "John Doe",
     "github_commit": "9e91a9d16eecf9e44935788ea777549de4377408",
@@ -245,7 +245,7 @@ Congrats, you're almost done! 😊 This is the final stop of the required deploy
 
 > `activate` - This option set to 'true' automatically activates the newly deployed model as the latest version of the environment to which it's deployed. Keep in mind that it might be dangerous to execute in the production environment directly. However, it's entirely okay for experiments or staging environments.
 
-```
+```python
 deployment.deploy(
     summary="What is this deployment about", # required
     description="You can use it as changelog.", # optional
