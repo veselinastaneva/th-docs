@@ -16,7 +16,7 @@ pip install teachablehub
 
 ### 2. Setup Deployment Keys
 
-To deploy any model to your Teachable, you'll need a Deployment Key. Deployment keys can be restricted for a particular environment and for a specific period of time. Such constraints might ensure the better security of your awesome project. It's quite a useful feature for the times when only the most experienced members of your team need to have deployment permission for the production environment or you have some colleague working on the project only for a month. 
+To deploy any model to your Teachable, you'll need a Deployment Key. Deployment keys can be restricted for a particular environment and for a specific period of time. Such constraints might ensure the better security of your awesome project. It's quite a useful feature for the times when only a few members of your team are responsible for deployments in production and need to have permission or you when have some colleague working on the project only for a month. 
 
 You can create New Deployment Key from Settings -> Deploy Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include: `production`, `staging`, `backenders-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
@@ -81,15 +81,11 @@ Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge 
 
 ## Advanced Deployment Guide
 
-We have enriched the Deployment with many options to ensure a seamless and clear process.  
+The Deployment process in TeachableHub is quite automated and seamless, but it also offers many additional options that help you and your team to keep a neat workflow and speak the same language.  
 
 ### Schema & Features Validation (optional, recommended)
 
-Although TeachableHub has some built-in validation options, you can further fine-tune those in accordance with your specific case.
-
-WE ARE TRYING TO DO IT AUTOMATICALLY. Change the text here.???//
-
-For Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is an everyday job. Not getting lost in translation is essential and configuring this is the connection between these two worlds. Surely, you'll become your Team's SuperHero right away! 😉
+For Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is an everyday job. Not getting lost in translation is essential and configuring this is the connection between these two worlds. Surely, if you use the `Schema & Freature Validtion`, you'll bring more clarity and become the team's SuperHero right away! 😉
 
 Deployment schema enables the TeachableHub Serving API to accept human-readable features. Furthermore, it ensures those features will be validated before they are sent to the model. 
 
@@ -241,13 +237,13 @@ deployment.context({
 
 ### Deployment Deploy (required)
 
-This is the final stop of the required deployment steps. Congrats, you're almost there! 😊 Here are the three important params to keep in mind:
+Congrats, you're almost done! 😊 This is the final stop of the required deployment steps. Here are the three important params to keep in mind:
 
 > `summary` - Just like the git commit messages, 'summary' lets you provide some information about the deployment. It's always great to have the details that will help you refer to this specific deployment or rollback.
 
 > `description` -  The description can be used as a changelog when needed. It should contain valuable clues on what's new stuff in this model deployment. I imagine how this can be very helpful for the engineers that are integrating the Serving APIs or maintaining the platforms, using this Teachable. You can change the 'description' from the TeachableHub UI as well.
 
-> `activate` - This option set to 'true' automatically sets the newly deployed model as the latest version of the environment to which it's deployed. Keep in mind that it might be dangerous to execute in the production environment directly. However, it's entirely okay for experimentation or staging environments.
+> `activate` - This option set to 'true' automatically activates the newly deployed model as the latest version of the environment to which it's deployed. Keep in mind that it might be dangerous to execute in the production environment directly. However, it's entirely okay for experiments or staging environments.
 
 ```
 deployment.deploy(
@@ -263,7 +259,7 @@ Here are a couple of useful functions that can assist in automating your model d
 
 ### `.successful()`
 
-The `successful` method returns a boolen result whether or not the deployment is created on the TeachableHub platform. Кeep in mind that the deployment need to be verfied successfuly as well in order to be served by the TeachableHub's Serving API. Check the next point for more details on verification.
+The `successful` method returns a boolean result whether or not the deployment is created on the TeachableHub platform. Кeep in mind that the deployment needs to be verified successfully as well in order to be served by the TeachableHub's Serving API. Check the next point for more details on verification.
 
 ```python
 if deployment.successful():
