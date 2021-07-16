@@ -58,7 +58,7 @@ If you want know more about the deployment process or all of the features please
 
 <br /><br /><br />
 
-## Model Deployment for Data Scientists
+## <a id="jupyter-notebook-environment"></a> Model Deployment for Data Scientists
 
 We know that Jupyter Notebook is a favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready-to-use basic but powerful DeepNote workflow combining the Experimentation and Deployment process in just 2 simple steps.
 
@@ -79,7 +79,7 @@ Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge 
 
 <br /><br /><br />
 
-## Advanced Deployment Guide
+## <a id="advanced-deployment-guide"></a> Advanced Deployment Guide
 
 The Deployment process in TeachableHub is quite automated and seamless, but it also offers many additional options that help you and your team to keep a neat workflow and speak the same language.  
 
@@ -253,7 +253,7 @@ deployment.deploy(
 )
 ```
 
-## CI/CD Automations Helpers
+## <a id="ci-cd-automation-helpers"></a> CI/CD Automations Helpers
 
 Here are a couple of useful functions that can assist in automating your model deployment in your CI/CD systems.
 
@@ -335,7 +335,7 @@ deployment.rollback(10)
 ```
 
 
-### Other Examples
+### <a id="other-examples"></a> Other Examples
 
 For the full list of features and examples checkout the following links:
 
