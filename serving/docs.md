@@ -2,13 +2,13 @@
 
 ## <a id="how-to-predict-getting-started"></a> Getting Started
 
-Teachables are a powerful machine learning models deployed as an API, entirely documented, available to be consumed by any server-side or client-side applications. Teachables are easily integrated in any platform via the TeachableHub REST API or the Python SDK. 
+Teachables are powerful machine learning models deployed as an API, entirely documented, available to be consumed by any server-side or client-side application. Teachables are easily integrated with any platform via the TeachableHub REST API or the Python SDK. 
 
 ### 1. Setup Serving Keys
 
-Serving Keys are the authorization you use for controlling who can make predictions and to which enviroment. Serving keys can be issued for a particular and environment and for a specific period of time. Such constraints ensure the better security of your awesome project. It's quite a useful feature for the times when you have some colleague working on the project only for a month, for example. 
+Serving Keys are the authorization you use for controlling who can make predictions and to which environment. Serving keys can be issued for a particular and environment and for a specific period of time. Such constraints ensure the better security of your awesome project. It's quite a useful feature for the times when you have some colleague working on the project only for a month, for example. 
 
-You can create New Serving Key from Settings -> Serving Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include:  `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
+You can create New Serving Key from Settings -> Serving Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include:  `production`, `experiments`, `staging`, `rails-backoffice`, `ios-app-production` etc.
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys/new", type: "primary", size: "medium", title: "Create a new Serving Key" } }}
 
@@ -66,11 +66,11 @@ print(predictions)
 
 # Advanced Predictions Guide
 
-We have enriched the Serving process, so you can manage easily and have a variety of options.  
+The Serving process is quite straightforward and seamless. However, TeachbleHub also offers a variety of options for the times you need to fine-tune and order the predictions.  
 
 ## Specific Version Predictions
 
-This is useful when you want to test with a older version of the model or when you want to improve the security and to have more control of what will be used in the software when this teachable is integrated it. It gives you the option to get predictions from a specific deployment version.
+This is useful when you want to test with an older version of the model or when you want to improve the security and have more control of what will be used in the software when this teachable is integrated. It gives you the option to get predictions from a specific deployment version.
 
 ```python
 teachable = TeachableHubPredictAPI(
@@ -84,7 +84,7 @@ teachable = TeachableHubPredictAPI(
 
 ## Latest Version Predictions
 
-That's the way to go, when you want to use always latest and greatest version. Do not specify any version and your Teachable will always return predictions from the latest model deployed in the specific environment. Such approach is recommended and very helpful for automating your deployment pipeline.
+That's the way to go when you want to use always the latest and greatest version. Do not specify any version and your Teachable will always return predictions from the latest model activated in the specific environment. Such an approach is recommended and very helpful for automating your deployment pipeline.
 
 ```python
 teachable = TeachableHubPredictAPI(
@@ -120,7 +120,7 @@ print(predictions)
 
 {{#if(!deployment_has_features_sample)}}
 
-**This deployment doesn't support Developer Friendly Predictions**. To configure Developer Friendly Predictions, take a look at the `Schema & Features Validation` section of the Deployment docs. Once you add those, your developers will love you and you'll surely become their superhero.🦸
+**This deployment doesn't support Developer Friendly Predictions**. To configure Developer Friendly Predictions, take a look at the `Schema & Features Validation` section of the [Deployment docs](https://github.com/pivanov/th-docs/blob/main/deployment/sklearn.md#feature-validation-properties). Once you add those, your developers will love you and you'll surely become their superhero.🦸
 
 Of course, when on your own you can always work with your Teachable without the `Features Validation`.
 
