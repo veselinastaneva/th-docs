@@ -120,7 +120,7 @@ print(predictions)
 
 {{#if(!deployment_has_features_sample)}}
 
-**This deployment doesn't support Developer Friendly Predictions**. To configure Developer Friendly Predictions, take a look at the `Schema & Features Validation` section of the [Deployment docs](https://github.com/pivanov/th-docs/blob/main/deployment/sklearn.md#feature-validation-properties). Once you add those, your developers will love you and you'll surely become their superhero.🦸
+**This deployment doesn't support Developer Friendly Predictions**. To configure Developer Friendly Predictions, take a look at the `Schema & Features Validation` section of the Deployment docs. Once you add those, your developers will love you and you'll surely become their superhero.🦸
 
 Of course, when on your own you can always work with your Teachable without the `Features Validation`.
 
