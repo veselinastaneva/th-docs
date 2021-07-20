@@ -18,7 +18,7 @@ pip install teachablehub
 
 To deploy any model to your Teachable, you'll need a Deployment Key. Deployment keys can be restricted for a particular environment and for a specific period of time. Such constraints might ensure the better security of your awesome project. It's quite a useful feature for the times when only the most experienced members of your team need to have deployment permission for the production environment or you have some colleague working on the project only for a month. 
 
-You can create New Deployment Key from Settings -> Deploy Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include: `production`, `staging`, `backenders-team`, `ds-team`, `john-dev`, `jane-staging` etc.
+You can create New Deployment Key from Settings -> Deploy Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include: `production`, `staging`, `backend-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys/new", type: "primary", size: "medium", title: "Create a new Deploy Key" } }}
 
