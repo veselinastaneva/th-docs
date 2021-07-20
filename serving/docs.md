@@ -1,7 +1,8 @@
 # How to make Predictions
 
-## <a id="how-to-predict-getting-started"></a> Getting Started
+<a id="how-to-predict-getting-started"></a>
 
+## Getting Started
 Teachables are powerful machine learning models deployed as an API, entirely documented, available to be consumed by any server-side or client-side application. Teachables are easily integrated with any platform via the TeachableHub REST API or the Python SDK. 
 
 ### 1. Setup Serving Keys
@@ -63,6 +64,8 @@ print(predictions)
 {{/}}
 
 <br/><br/>
+
+<a id="how-to-predict-advanced-prediction-guide"></a> 
 
 # Advanced Predictions Guide
 
@@ -165,9 +168,8 @@ The SDK raise the following exceptions:
 | `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
 <a id="how-to-predict-rest-api"></a>
-# REST API
 
-{{serving_api_base_url}}
+# REST API
 
 > You can play around with your teachables via the [TeachbaleHub's Serving API Swagger UI](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
 

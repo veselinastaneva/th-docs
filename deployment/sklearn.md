@@ -58,7 +58,7 @@ If you want know more about the deployment process or all of the features please
 
 <br /><br /><br />
 
-## Model Deployment for Data Scientists
+## <a id="how-to-deploy-jupyter-notebook-environment"></a> Model Deployment for Data Scientists
 
 We know that Jupyter Notebook is a favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready-to-use basic but powerful DeepNote workflow combining the Experimentation and Deployment process in just 2 simple steps.
 
@@ -79,7 +79,7 @@ Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge 
 
 <br /><br /><br />
 
-## Advanced Deployment Guide
+## <a id="how-to-deploy-advanced-deployment-guide"></a> Advanced Deployment Guide
 
 The Deployment process in TeachableHub is quite automated and seamless, but it also offers many additional options that help you and your team to keep a neat workflow and speak the same language.  
 
@@ -222,7 +222,7 @@ deployment.samples(
 
 Deployment Context is quite useful for the time when you need to add some information that **brings more transparency for the whole team** about the training environment, versioning of the dataset, versions of the packages in the model deployment environment, servers and etc. It's also effective for easily tracking changes, version of the training data, or environments where the deployment was made. All of this helps you with reproducing the models every time.
 
-```
+```python
 deployment.context({
     "author": "John Doe",
     "github_commit": "9e91a9d16eecf9e44935788ea777549de4377408",
@@ -245,7 +245,7 @@ Congrats, you're almost done! 😊 This is the final stop of the required deploy
 
 > `activate` - This option set to 'true' automatically activates the newly deployed model as the latest version of the environment to which it's deployed. Keep in mind that it might be dangerous to execute in the production environment directly. However, it's entirely okay for experiments or staging environments.
 
-```
+```python
 deployment.deploy(
     summary="What is this deployment about", # required
     description="You can use it as changelog.", # optional
@@ -253,7 +253,7 @@ deployment.deploy(
 )
 ```
 
-## CI/CD Automations Helpers
+## <a id="how-to-deploy-ci-cd-automation-helpers"></a> CI/CD Automations Helpers
 
 Here are a couple of useful functions that can assist in automating your model deployment in your CI/CD systems.
 
@@ -335,7 +335,7 @@ deployment.rollback(10)
 ```
 
 
-### Other Examples
+### <a id="how-to-deploy-other-examples"></a> Other Examples
 
 For the full list of features and examples checkout the following links:
 
