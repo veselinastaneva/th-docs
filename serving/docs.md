@@ -64,7 +64,7 @@ print(predictions)
 
 <br/><br/>
 
-# <a id="advanced-prediction-guide"></a> Advanced Predictions Guide
+# <a id="how-to-predict-advanced-prediction-guide"></a> Advanced Predictions Guide
 
 We have enriched the Serving process, so you can manage easily and have a variety of options.  
 
