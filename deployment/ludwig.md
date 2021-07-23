@@ -1,6 +1,8 @@
-# <a id="how-to-deploy"></a> Deploying Ludwig Models
+<a id="how-to-deploy"></a>
+# Deploying Ludwig Models
 
-## <a id="how-to-deploy-getting-started"></a> Getting Started
+<a id="how-to-deploy-getting-started"></a>
+## Getting Started
 
 You can integrate this SDK in your training logic, Jupyter notebook during experimentation, or your CI/CD system during the production environment. This SDK is also applicable for deploying existing models from your model registry or storage.
 
@@ -16,14 +18,14 @@ pip install teachablehub
 
 ### 2. Setup Deployment Keys
 
-To deploy any model to your Teachable, you'll need a Deployment Key. Deployment keys can be restricted for a particular environment and for a specific period of time. Such constraints might ensure the better security of your awesome project. It's quite a useful feature for the times when only a few members of your team are responsible for deployments in production and need to have permission or you when have some colleague working on the project only for a month. 
+To deploy any model to your Teachable, you'll need a Deployment Key. Deployment keys can be restricted for a particular environment and for a specific period of time. Such constraints might ensure the better security of your awesome project. It's quite a useful feature for the times when only a few members of your team are responsible for deployments in production and need to have permission or you when having some colleague working on the project only for a month.  
 
 You can create New Deployment Key from Settings -> Deploy Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include: `production`, `staging`, `backend-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/deploy-keys/new", type: "primary", size: "medium", title: "Create a new Deploy Key" } }}
 
-
-### <a id="how-to-deploy-examples"></a> 3. Deploy a Model
+<a id="how-to-deploy-examples"></a>
+### 3. Deploy a Model
 
 ```python
 from teachablehub.deployments.ludwig import TeachableDeployment
@@ -57,7 +59,7 @@ If you want know more about the deployment process or all of the features please
 
 <br /><br /><br />
 
-
+<a id="how-to-deploy-jupyter-notebook-environment"></a>
 ## Model Deployment for Data Scientists
 
 We know that Jupyter Notebook is your favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready-to-use basic but powerful DeepNote workflow combining the Experimentation and Deployment process in just 2 simple steps.
@@ -78,6 +80,7 @@ Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge 
 
 <br /><br /><br />
 
+<a id="how-to-deploy-advanced-deployment-guide"></a>
 ## Advanced Deployment Guide
 
 The Deployment process in TeachableHub is quite automated and seamless, but it also offers many additional options that help you and your team to keep a neat workflow and speak the same language.  
@@ -92,7 +95,7 @@ Deployment schema enables the TeachableHub Serving API to accept human-readable 
 
 #### Structure
 
-The Deploment Schema contains two parameters `features` and the `ndarray` mapping.
+The Deploment Schema contains the `features` parameter.
 
 ```python
 deployment.schema({
@@ -155,7 +158,7 @@ deployment.schema({
 
 ### `help`
 
-**TeachableHub use this rule to generate Docs section automatically where explain what is this feature about.** This is very helpful when your backend team or 3rd-party integrator consume the API, because they will be aware what data they should provide to the Teachable Predict API. 
+**TeachableHub uses this rule to generate Docs section automatically where explain what is this feature about.** This is very helpful when your backend team or 3rd-party integrator consumes the API because they will be aware of what data they should provide to the Teachable Predict API. 
 
 ```python
 deployment.schema({
@@ -187,7 +190,7 @@ deployment.samples(
 
 Deployment Context is quite useful for the time when you need to add some information that **brings more transparency for the whole team** about the training environment, versioning of the dataset, versions of the packages in the model deployment environment, servers and etc. It's also effective for easily tracking changes, version of the training data, or environments where the deployment was made. All of this helps you with reproducing the models every time.
 
-```
+```python
 deployment.context({
     "branch": "main",
     "github_commit": "9e91a9d16eecf9e44935788ea777549de4377408",
@@ -197,8 +200,8 @@ deployment.context({
     "python": platform.python_version(),
     "local_hostname": platform.node(),
     "os_info": platform.version()
-
-})```
+})
+```
 
 ### Deployment Deploy (required)
 
@@ -219,9 +222,10 @@ deployment.deploy(
 )
 ```
 
+<a id="how-to-deploy-ci-cd-automation-helpers"></a>
 ## CI/CD Automations Helpers
 
-Here are a couple of useful functions that can assist in automating your model deployment in your CI/CD systems.
+Below you may find are a couple of useful functions that can assist in automating your model deployment in your CI/CD systems.
 
 ### `.successful()`
 
@@ -234,7 +238,7 @@ if deployment.successful():
 
 ### `.verified(reload=False)`
 
-After every deployment based on your `.samples({...})` explained above, TeachableHub is verifing whether or not the deployment is configured correctly and woking as expected.
+After every deployment based on your `.samples({...})` explained above, TeachableHub is verifying whether or not the deployment is configured correctly and working as expected.
 
 The `reload` option is to retrieve the latest updated deployment state from the TeachableHub platform.
 
@@ -300,7 +304,7 @@ Revert to this deployment as your latest version of the environment this deploym
 deployment.rollback(10)
 ```
 
-
+<a id="how-to-deploy-other-examples"></a>
 ### Other Examples
 
 For the full list of features and examples checkout the following links:

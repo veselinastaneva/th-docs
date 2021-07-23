@@ -1,6 +1,9 @@
 # How to make Predictions
 
-## <a id="how-to-predict-getting-started"></a> Getting Started
+
+<a id="how-to-predict-getting-started"></a> 
+
+## Getting Started
 
 Teachables are a powerful machine learning models deployed as an API, entirely documented, available to be consumed by any server-side or client-side applications. Teachables are easily integrated in any platform via the TeachableHub REST API or the Python SDK. 
 
@@ -64,9 +67,11 @@ print(predictions)
 
 <br/><br/>
 
-# <a id="advanced-prediction-guide"></a> Advanced Predictions Guide
+<a id="how-to-predict-advanced-prediction-guide"></a> 
 
-With advanced predictions, you can apply specifications, ordering, and a variety of options to the serving request.  
+# Advanced Predictions Guide
+
+The Serving process is quite straightforward and seamless. However, TeachbleHub also offers a variety of options for the times you need to fine-tune and order the predictions.  
 
 ## Specific Version Predictions
 
@@ -165,7 +170,9 @@ The SDK raise the following exceptions:
 | `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
 
-# <a id="how-to-predict-rest-api"></a> REST API
+<a id="how-to-predict-rest-api"></a>
+
+# REST API
 
 > You can play around with your teachables via the [TeachbaleHub's Serving API Swagger UI](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
 
@@ -189,8 +196,8 @@ For each prediction request towards the Rest API, you can pass the following Que
 | :---  | :--- | :--- | :--- | :--- |
 | environment     | `string` |  `your-teachable-env` | `production` | Specifies towards which deployment environment the prediction will be made. |
 | version     | `int` |  **min**: `0` **max** `2000` | `0` | Specifies towards which deployment version the prediction will be made. |
-| order     | `string` |  `desc` or `asc` | `desc` | Sorts the results when working with multiple number of classes. That works only when you've defined the classes in the Teachable Deployment |
-| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | Sets limitation on the number of classes that will be returned. That works only when you've defined the classes in the Teachable Deployment|
+| order     | `string` |  `desc` or `asc` | `desc` | Very useful option for sorting the results when working with multiple number of classes. That works only when you've defined the classes in the Teachable Deployment|
+| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | Set limitation on the number of classes that will be returned. That works only when you've defined the classes in the Teachable Deployment|
 | threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` | Returns all classes that the model confidence classifies above the given threshold.|
 
 <br />
