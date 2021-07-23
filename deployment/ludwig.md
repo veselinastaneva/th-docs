@@ -83,17 +83,15 @@ Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge 
 <a id="how-to-deploy-advanced-deployment-guide"></a>
 ## Advanced Deployment Guide
 
-We have enriched the Deployment with many options to ensure a seamless and clear process.  
+The Deployment process in TeachableHub is quite automated and seamless, but it also offers many additional options that help you and your team to keep a neat workflow and speak the same language.  
 
 ### Schema & Features Validation (optional)
 
-For Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is an everyday job. Not getting lost in translation is essential and configuring this is the connection between these two worlds. Surely, you'll become your Team's SuperHero right away! 😉
+TeachableHub has built-in mechanisms for **`Schema and Features Validation` that are automatically received from your Ludwig model `input_features` and `output_features`**. Still, you can further fine-tune those in accordance with your specific case.
 
-Deployment schema enables the TeachableHub Serving API to accept human-readable features. Furthermore, it ensures those features will be validated before they are sent to the model. The schema validation feature eliminates any involuntary mistakes and errors when you are working with your Teachable Predict API and will generate better documentation free of charge.
+For Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is an everyday job. Not getting lost in translation is essential and configuring this is the connection between these two worlds. You'll surely become your Team's SuperHero right away! 😉
 
-TeachableHub does the heavy lifting for you by automatically getting the Deployment Schema from the input_features you describe. 
-
-Although these are already built-in validation options, you can further fine-tune in accordance with your specific case.
+Deployment schema enables the TeachableHub Serving API to accept human-readable features. Furthermore, it ensures those features will be validated before they are sent to the model. The cool thing is that it eliminates any involuntary mistakes and errors while working with your Teachable Predict API and will generate better documentation with no effort and free of charge.
 
 #### Structure
 
@@ -213,7 +211,7 @@ Congrats, you're almost done! 😊 This is the final stop of the required deploy
 
 > `description` -  The description can be used as a changelog when needed. It should contain valuable clues on what's new stuff in this model deployment. I imagine how this can be very helpful for the engineers that are integrating the Serving APIs or maintaining the platforms, using this Teachable. You can change the 'description' from the TeachableHub UI as well.
 
-> `activate` - This option set to 'true' automatically sets the newly deployed model as the latest version of the environment to which it's deployed. Keep in mind that it might be dangerous to execute in the production environment directly. However, it's entirely okay for experimentation or staging environments.
+> `activate` - This option set to 'true' automatically sets the newly deployed model as the latest version of the environment to which it's deployed. Keep in mind that it might be dangerous to execute in the production environment directly. However, it's entirely okay for experiments or staging environments.
 
 
 ```
