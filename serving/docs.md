@@ -67,6 +67,12 @@ print(predictions)
 
 <br/><br/>
 
+
+# Features Help Section
+
+{{features_help}}
+
+
 <a id="how-to-predict-advanced-prediction-guide"></a> 
 
 # Advanced Predictions Guide
