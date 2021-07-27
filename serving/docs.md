@@ -1,4 +1,4 @@
-# How to make Predictions
+{{header: { title: "How to make Predictions" } }}
 
 <a id="how-to-predict-getting-started"></a>
 ## Getting Started
