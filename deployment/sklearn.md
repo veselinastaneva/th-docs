@@ -150,6 +150,25 @@ Data types allowed for the key value pairs can be one of the following Type Name
 | `string`     | [basestring()](#) | [str](#) |
 | `date`     | [datetime.date](#) | [datetime.date](#) |
 
+### `allowed`
+
+This rule takes a list of allowed values. Validates the target value if the value is in the allowed values. The types `string`, `number`, etc. are supported as well.
+
+```python
+deployment.schema({
+    "features": {
+        ...
+        "sex":  { 
+            "type": "integer",
+            "allowed": [1, 2], 
+            "max": 0.1,
+            "help": "sex as integer, 1 for Male and 2 for Femail."
+        },
+        ...
+    },
+    ...
+})
+```
 
 ### `min, max`
 
