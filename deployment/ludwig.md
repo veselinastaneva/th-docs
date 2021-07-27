@@ -1,4 +1,4 @@
-# Deploying Ludwig Models
+{{header: { title: "Deploying Ludwig Models" } }}
 
 <a id="how-to-deploy-getting-started"></a>
 ## Getting Started
