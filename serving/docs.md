@@ -1,8 +1,6 @@
 # How to make Predictions
 
-
-<a id="how-to-predict-getting-started"></a> 
-
+<a id="how-to-predict-getting-started"></a>
 ## Getting Started
 
 Teachables are a powerful machine learning models deployed as an API, entirely documented, available to be consumed by any server-side or client-side applications. Teachables are easily integrated in any platform via the TeachableHub REST API or the Python SDK. 
@@ -266,5 +264,4 @@ The TeachableHub's Serving API uses conventional HTTP response codes to indicate
 | 422     |  Validation Error |
 | 500     |  Unhandled internal server error. Please open a ticket to report it. |
 | 501     |  Not Implemented features or methods. |
-
 
