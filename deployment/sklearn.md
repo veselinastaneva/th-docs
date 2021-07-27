@@ -1,4 +1,4 @@
-# Deploying Scikit-Learn Models
+{{header: { title: "Deploying Scikit-Learn Models" } }}
 
 <a id="how-to-deploy-getting-started"></a>
 ## Getting Started
