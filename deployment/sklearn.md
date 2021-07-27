@@ -1,4 +1,3 @@
-<a id="how-to-deploy"></a>
 # Deploying Scikit-Learn Models
 
 <a id="how-to-deploy-getting-started"></a>
