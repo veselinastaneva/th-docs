@@ -1,4 +1,3 @@
-<a id="how-to-deploy"></a>
 # Deploying Ludwig Models
 
 <a id="how-to-deploy-getting-started"></a>
