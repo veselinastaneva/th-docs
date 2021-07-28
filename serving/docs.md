@@ -265,3 +265,15 @@ The TeachableHub's Serving API uses conventional HTTP response codes to indicate
 | 500     |  Unhandled internal server error. Please open a ticket to report it. |
 | 501     |  Not Implemented features or methods. |
 
+<br /><br /><br />
+
+# Streamlit Apps
+
+![TeachableHub + Streamlit + Heroku](https://media-blog.sashido.io/content/images/2021/07/thslhe.001.jpeg)
+
+Integrate your Teachables within your Streamlit projects and deploy them on Heroku for free.
+
+## Demo Applications
+
+- [Iris Classifier with sklearn](https://th-iris-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
+- [BBC Text Classifier with Ludwig](https://th-ludwig-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
