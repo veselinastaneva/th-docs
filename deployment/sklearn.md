@@ -123,7 +123,7 @@ deployment.schema({
 # What we have in the request (they can be in different order)
 {"features": {"sepal_length": 3, "sepal_width": 1, "petal_length": 2 "petal_width": 4} }
 
-#Our ndarray map look like this / We ensure the same order every time.
+# Our ndarray map look like this / We ensure the same order every time.
 "ndarray": [["sepal_length", "sepal_width", "petal_length", "petal_width" ]]
 
 # What TeachableHub will do automatically
