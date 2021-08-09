@@ -188,7 +188,7 @@ The Serving API is organized around REST. Our API has predictable resource-orien
 
 Base URL:
 
-```
+```javascript
 {{serving_api_base_url}}
 ```
 
