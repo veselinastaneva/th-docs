@@ -178,7 +178,7 @@ The SDK raise the following exceptions:
 
 # REST API
 
-> You can play around with your teachables via the [TeachbaleHub's Serving API Swagger UI](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
+> You can play around with your teachables via the [TeachbaleHub's Serving API Swagger UI]({{serving_api_swagger_url}}docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
 
 <br />
 
@@ -240,7 +240,7 @@ curl -X 'POST' \
 
 This is an actual prediction response of `v{{deployment_version}}` of the `{{handler}}/{{teachable}}`
 
-> Keep in mind that this response can change based on the deployment configuration. To be aware with all the possible prediction responses please visit the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
+> Keep in mind that this response can change based on the deployment configuration. To be aware with all the possible prediction responses please visit the [TeachbaleHub's Serving API Swagger Docs]({{serving_api_swagger_url}}docs#/predictions/predict__user___teachable__predict__post)
 
 ```javascript
 {{deployment_prediction_result}}
@@ -251,7 +251,7 @@ This is an actual prediction response of `v{{deployment_version}}` of the `{{han
 
 The TeachableHub's Serving API uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a prediction failed, etc.). Codes in the 5xx range indicate an error with the TeachableHub's Serving API servers (these are rare).
 
-> Examples of the Errors Responses you can find at the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
+> Examples of the Errors Responses you can find at the [TeachbaleHub's Serving API Swagger Docs]({{serving_api_swagger_url}}docs#/predictions/predict__user___teachable__predict__post)
 
 
 | Code     |      Message      |
