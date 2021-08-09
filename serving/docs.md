@@ -182,6 +182,16 @@ The SDK raise the following exceptions:
 
 <br />
 
+## API Endpoint
+
+The Serving API is organized around REST. Our API has predictable resource-oriented URLs, accepts arguments as JSON in the request body and return results as JSON in the response body, and uses standard HTTP response codes, authentication, and verbs.
+
+Base URL:
+
+```
+{{serving_api_base_url}}
+```
+
 ## Authentication
 
 The TeachableHub's Serving API uses Serving Keys to authenticate your requests. Authentication to the Serving API is performed via `X-Serving-Key` header. Provide your Serving Key as the value to this header.
