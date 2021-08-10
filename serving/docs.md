@@ -1,13 +1,15 @@
-# How to make Predictions
+{{header: { title: "How to make Predictions" } }}
 
-## <a id="how-to-predict-getting-started"></a> Getting Started
+<a id="how-to-predict-getting-started"></a>
+## Getting Started
 
-Teachables могат да бъдат интегрирани във всяка една платформа, чрез SDK или Rest API. И тнт локуми
-
+Teachables are a powerful machine learning models deployed as an API, entirely documented, available to be consumed by any server-side or client-side applications. Teachables are easily integrated in any platform via the TeachableHub REST API or the Python SDK. 
 
 ### 1. Setup Serving Keys
 
-Тук кратка информация за serving кийс, че чрез тях контролираш, кой може да прави предикшъни към кой environment за по-добро секюрити и тнт. Добри примери за serving keys са `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
+Serving Keys are the authorization you use for controlling who can make predictions and to which environment of your Teachable. Serving keys can be issued for a particular and environment and for a specific period of time. Such constraints ensure the better security of your awesome project. It's quite a useful feature for the times when you have some colleague working on the project only for a month, for example. 
+
+You can create New Serving Key from Settings -> Serving Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include:  `production`, `staging`, `rails-backoffice`, `ios-app-production` etc.
 
 {{button: { to: "/{{handler}}/{{teachable}}/settings/serving-keys/new", type: "primary", size: "medium", title: "Create a new Serving Key" } }}
 
@@ -16,7 +18,9 @@ Teachables могат да бъдат интегрирани във всяка �
 
 ### 2. Install Python SDK
 
-За ползват python sdk-то. трябва да го инсталират с тази команда. Изисква минимална пайтън версия Python 3.4+
+Requirements: Python 3.4+
+
+To get predictions via the Python SDK, you'll first need to install the SDK with the following command:
 
 ```
 pip install teachablehub
@@ -25,7 +29,7 @@ pip install teachablehub
 
 ### 3. Start making Predictions
 
-Тук трябва да обишем, че на всеки един деплойнът модел без никаква допълнителна настройка може да се правят тези ndarray predictions. 
+Each model you have already deployed can serve ndarray predictions without any additional setting. Check the example below:
 
 {{#if(deployment_has_features_sample)}}
 ```python
@@ -61,11 +65,21 @@ print(predictions)
 
 <br/><br/>
 
+
+# Features Help Section
+
+{{features_help}}
+
+
+<a id="how-to-predict-advanced-prediction-guide"></a> 
+
 # Advanced Predictions Guide
 
-## This Version Predictions
+The Serving process is quite straightforward and seamless. However, TeachbleHub also offers a variety of options for the times you need to fine-tune and order the predictions.  
 
-When you want to work with a specific deployment version. This is useful when you want to test with a oldest version or when you want to improve the security and to have more control of what will be used in the software when this teachable is integrated it. 
+## Specific Version Predictions
+
+This is useful when you want to test with an older version of the model or when you want to improve the security and to have more control of what will be used in the software when this teachable is integrated. It gives you the option to get predictions from a specific deployment version.
 
 ```python
 teachable = TeachableHubPredictAPI(
@@ -79,7 +93,7 @@ teachable = TeachableHubPredictAPI(
 
 ## Latest Version Predictions
 
-In cases when you want to use always latest and greatest version this is the best approach. By not specifying any version the teachable will always return predictions from the latest model deployed in the specific environment. This is recommended and very helpful when you are automating your deployment pipeline.
+That's the way to go, when you want to use always latest and greatest version. Do not specify any version and your Teachable will always return predictions from the latest model activated in the specific environment. Such approach is recommended and very helpful for automating your deployment pipeline.
 
 ```python
 teachable = TeachableHubPredictAPI(
@@ -92,7 +106,7 @@ teachable = TeachableHubPredictAPI(
 
 ## Developer Friendly Predictions
 
-As Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is everyday job. Using the `Features Validation` feature of TeachableHub is the connection between these two worlds.
+For Data Scientists working with ndarrays and with numbers is business as usual. On the other side for the Back-end or the Front-end engineers working with JSON data and object is an everyday job. Not getting lost in translation is essential and using the `Features Validation` feature of TeachableHub is the connection between these two worlds.
 
 
 {{#if(deployment_has_features_sample)}}
@@ -115,9 +129,9 @@ print(predictions)
 
 {{#if(!deployment_has_features_sample)}}
 
-**This deployment doesn't support Developer Friendly Predictions** to configure them, please take a look at the `Schema & Features Validation` section of the Deployment docs. If you do it, your developers will love you and you'll be their superhero :)
+**This deployment doesn't support Developer Friendly Predictions**. To configure Developer Friendly Predictions, take a look at the `Schema & Features Validation` section of the Deployment docs. Once you add those, your developers will love you and you'll surely become their superhero.🦸
 
-Until then, you can work with your teachable this way.
+Of course, when on your own you can always work with your Teachable without the `Features Validation`.
 
 ```python
 from teachablehub.clients import TeachableHubPredictAPI
@@ -137,15 +151,15 @@ print(predictions)
 
 ### `.predict(ndarray_or_features, **kwargs)`
 
-The `teachable.predict` method can work both with ndarrays (as well as np.ndarray) and features dict. In order to make much more useful it has support of couple additional kwargs that will eliminate some boring tasks for you when working with the classification models.
+The `teachable.predict` method works both with ndarrays (as well as np.ndarray) and features dict. In order to make it much more useful, we've added support for a couple of additional kwargs that eliminate some boring tasks for you when working with the classification models.
 
 #### Params/kwargs:
 
 | Param | Type | Values | Default | Description |
 | :---  | :--- | :--- | :--- | :--- |
-| order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+| order     | `string` |  `desc` or `asc` | `desc` | Very useful option for sorting the results when working with multiple number of classes. That works only when you've defined the classes in the Teachable Deployment|
+| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | Set limitation on the number of classes that will be returned. That works only when you've defined the classes in the Teachable Deployment|
+| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` | Returns all classes that the model confidence classifies above the given threshold.|
 
 
 ## Errors
@@ -159,14 +173,22 @@ The SDK raise the following exceptions:
 | `UnsuccessfulRequestError`     |  General Serving API errors 4xx and 5xx |
 | `UnauthorizedError`     |  Wrong Serving Key or configuration |
 
+
 <a id="how-to-predict-rest-api"></a>
+
 # REST API
 
-{{serving_api_base_url}}
-
-> You can play around with your teachables via the [TeachbaleHub's Serving API Swagger UI](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
+> You can play around with your teachables via the [TeachbaleHub's Serving API Swagger UI]({{serving_api_swagger_url}}docs#/predictions/predict__user___teachable__predict__post) or following the examples below.
 
 <br />
+
+## API Endpoint
+
+The Serving API is organized around REST. Our API has predictable resource-oriented URLs, accepts arguments as JSON in the request body and return results as JSON in the response body, and uses standard HTTP response codes, authentication, and verbs.
+
+Base URL:
+
+<pre>{{serving_api_base_url}}</pre>
 
 ## Authentication
 
@@ -180,21 +202,21 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 
 ## Query Params:
 
-Със всеки един предикшън към Rest API могат да се подават и следните Query Params
+For each prediction request towards the Rest API, you can pass the following Query Params
 
 | Param | Type | Values | Default | Description |
 | :---  | :--- | :--- | :--- | :--- |
-| environment     | `string` |  `your-teachable-env` | `production` | към deployment от кой енв ще се прави предикшън  |
-| version     | `int` |  **min**: `0` **max** `2000` | `0` | към коя версия на deployment ще се прави предикшън  |
-| order     | `string` |  `desc` or `asc` | `desc` | сортира резултат когато имаме много класове. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | колко класа да върне. това работи единственно, когато teachable-a има дефинирани classes в deployment-а. |
-| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` |    да върне всички класове които конфиденса на модела е над този трешхолд. |
+| environment     | `string` |  `your-teachable-env` | `production` | Specifies towards which deployment environment the prediction will be made. |
+| version     | `int` |  **min**: `0` **max** `2000` | `0` | Specifies towards which deployment version the prediction will be made. |
+| order     | `string` |  `desc` or `asc` | `desc` | Very useful option for sorting the results when working with multiple number of classes. That works only when you've defined the classes in the Teachable Deployment|
+| limit     |    `int` | **min**: `0` **max** `2000` | `-1`  | Set limitation on the number of classes that will be returned. That works only when you've defined the classes in the Teachable Deployment|
+| threshold | `float` | **min**: `0.0` **max** `1.0` | `0.0` | Returns all classes that the model confidence classifies above the given threshold.|
 
 <br />
 
 ## Making Prediction Requests
 
-Тук трябва да опишем, че TH поддържа schema validation, която гарантира, че всеки един предикшън към модела, ще бъде с правилните features, по правилния начин и ще връща правилни релзултати всеки път. От друга страна, по този начин всеки един в екипа ще знае, модела колко и какви фийчъри очаква.
+Another great feature that TeachableHub supports is 'Schema Validation'. It guarantees that every single prediction towards your model will hold the correct features, passed in the right order, and will return accurate results each time you make a prediction. Moreover, your teammates will be always informed of what features the model is expecting, their number, and order. How cool is that!
 
 {{#if(deployment_has_features_sample)}}
 ```bash
@@ -226,7 +248,7 @@ curl -X 'POST' \
 
 This is an actual prediction response of `v{{deployment_version}}` of the `{{handler}}/{{teachable}}`
 
-> Keep in mind that this response can change based on the deployment configuration. To be aware with all the possible prediction responses please visit the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
+> Keep in mind that this response can change based on the deployment configuration. To be aware with all the possible prediction responses please visit the [TeachbaleHub's Serving API Swagger Docs]({{serving_api_swagger_url}}docs#/predictions/predict__user___teachable__predict__post)
 
 ```javascript
 {{deployment_prediction_result}}
@@ -237,7 +259,7 @@ This is an actual prediction response of `v{{deployment_version}}` of the `{{han
 
 The TeachableHub's Serving API uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a prediction failed, etc.). Codes in the 5xx range indicate an error with the TeachableHub's Serving API servers (these are rare).
 
-> Examples of the Errors Responses you can find at the [TeachbaleHub's Serving API Swagger Docs](https://serve-teachablehub-dev.scalabl.cloud/docs#/predictions/predict__user___teachable__predict__post)
+> Examples of the Errors Responses you can find at the [TeachbaleHub's Serving API Swagger Docs]({{serving_api_swagger_url}}docs#/predictions/predict__user___teachable__predict__post)
 
 
 | Code     |      Message      |
@@ -251,4 +273,15 @@ The TeachableHub's Serving API uses conventional HTTP response codes to indicate
 | 500     |  Unhandled internal server error. Please open a ticket to report it. |
 | 501     |  Not Implemented features or methods. |
 
+<br /><br /><br />
 
+# Streamlit Apps
+
+![TeachableHub + Streamlit + Heroku](https://media-blog.sashido.io/content/images/2021/07/thslhe.001.jpeg)
+
+Integrate your Teachables within your Streamlit projects and deploy them on Heroku for free.
+
+## Demo Applications
+
+- [Iris Classifier with sklearn](https://th-iris-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
+- [BBC Text Classifier with Ludwig](https://th-ludwig-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
