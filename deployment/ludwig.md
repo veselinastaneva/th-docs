@@ -17,7 +17,7 @@ pip install teachablehub
 
 ### 2. Setup Deployment Keys
 
-To deploy any model to your Teachable, you'll need a Deployment Key. Deployment keys can be restricted for a particular environment and for a specific period of time. Such constraints might ensure the better security of your awesome project. It's quite a useful feature for the times when only a few members of your team are responsible for deployments in production and need to have permission or you when having some colleague working on the project only for a month.  
+To deploy any model to your Teachable, you'll need a Deployment Key. Deployment keys can be restricted for a particular environment and for a specific period of time. Such constraints ensure the better security of your awesome project. It's quite a useful feature for the times when only a few members of your team are responsible for deployments in production and need to have permission or you when having some colleague working on the project only for a month.  
 
 You can create New Deployment Key from Settings -> Deploy Keys -> Add Key, where you'll need to supply a Key Name and Environment for which this key will be valid. Best practices suggest the name for each key to be descriptive, some good examples include: `production`, `staging`, `backend-team`, `ds-team`, `john-dev`, `jane-staging` etc.
 
@@ -61,7 +61,7 @@ If you want know more about the deployment process or all of the features please
 <a id="how-to-deploy-jupyter-notebook-environment"></a>
 ## Model Deployment for Data Scientists
 
-We know that Jupyter Notebook is your favorite tool for experimentations and innovations. Having this in mind we would love to share with you a ready-to-use basic but powerful DeepNote workflow combining the Experimentation and Deployment process in just 2 simple steps.
+We know that Jupyter Notebook is your favorite tool for experimentations and innovations. Having this in mind, we would love to share with you a ready-to-use basic yet powerful DeepNote workflow combining the Experimentation and Deployment process in just 2 simple steps.
 
 Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge Auto-Generated Serving API Documentation, Model Validation that protects you from deploying models that are not working as expected, and better usage examples for everyone who integrates the Teachable in every software.
 
@@ -94,7 +94,7 @@ Deployment schema enables the TeachableHub Serving API to accept human-readable 
 
 #### Structure
 
-The Deploment Schema contains the `features` parameter.
+The Deploment Schema contains the `features` parameter, which matches the "input_features" of your model by default.
 
 ```python
 deployment.schema({
@@ -176,7 +176,7 @@ deployment.schema({
 
 ### `help`
 
-**TeachableHub uses this rule to generate Docs section automatically where explain what is this feature about.** This is very helpful when your backend team or 3rd-party integrator consumes the API because they will be aware of what data they should provide to the Teachable Predict API. 
+**TeachableHub uses this rule to automatically generate Docs section that explains what is a specific feature about.** This is very helpful when your backend team or 3rd-party integrator consumes the API because they will be aware of what data they should provide to the Teachable Predict API. So better not skip this one! 😉
 
 ```python
 deployment.schema({
@@ -194,6 +194,11 @@ deployment.schema({
 })
 ```
 
+### Model Classes (optional)
+
+The TeachableHub's Auto-Generated Serving API will use the Model Classes in the prediction results to return human-readable predictions outputs. Model classes are automatically configured from your model's "output_features".
+
+
 ### Usage Samples (required)
 
 Maintaining these deployment samples, you receive free-of-charge Auto-Generated Serving API Documentation, Model Validation that protects you from deploying models that are not working as expected, and better usage examples for everyone who will integrate the Teachable in their software. These examples are the ones used in the `PredictMan` as well. **At least one of `ndarray` or `features` is required**. If your `Teachable` is using the `Features Validation` feature both are required.
@@ -206,7 +211,7 @@ deployment.samples(
 
 ### Deployment Context (optional)
 
-Deployment Context is quite useful for the time when you need to add some information that **brings more transparency for the whole team** about the training environment, versioning of the dataset, versions of the packages in the model deployment environment, servers and etc. It's also effective for easily tracking changes, version of the training data, or environments where the deployment was made. All of this helps you with reproducing the models every time.
+Deployment Context is quite useful for the time when you need to add some information that **brings more transparency for the whole team** about the training environment, versioning of the dataset, versions of the packages in the model deployment environment, servers, and etc. It's also effective for easily tracking changes, version of the training data, or environments where the deployment was made. All of this helps you with reproducing the models every time.
 
 ```python
 deployment.context({
@@ -243,7 +248,7 @@ deployment.deploy(
 <a id="how-to-deploy-ci-cd-automation-helpers"></a>
 ## CI/CD Automations Helpers
 
-Below you may find are a couple of useful functions that can assist in automating your model deployment in your CI/CD systems.
+Below you may find a couple of useful functions that can assist in automating your model deployment in your CI/CD systems.
 
 ### `.successful()`
 
