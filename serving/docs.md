@@ -275,6 +275,8 @@ The TeachableHub's Serving API uses conventional HTTP response codes to indicate
 
 <br /><br /><br />
 
+<a id="build-and-share-apps-guide"></a> 
+
 # Build and share data apps in minutes
 
 If you're one of those ambitious people who really want to get your models out there solving real-life problems, you might be thinking a bit further than just the training and deployment stages. 
