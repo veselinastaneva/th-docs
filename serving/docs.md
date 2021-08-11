@@ -275,13 +275,33 @@ The TeachableHub's Serving API uses conventional HTTP response codes to indicate
 
 <br /><br /><br />
 
-# Streamlit Apps
+# Build and share data apps in minutes
+
+If you're one of those ambitious people who really want to get your models out there solving real-life problems, you might be thinking a bit further than just the training and deployment stages. 
+
+- How about presenting your model in a beautiful web application to your users or your business stakeholders? 
+- Who will build this app if you have no front-end skills in your team? Where do you host such an app so it is performant? 
+- How much will this cost? 
+- How long would it take you to find the answer to those questions? 
+- How long until you solve them?
+
+**All this can take you minutes!** No, we were not kidding when we said we'll give you superpowers. 
 
 ![TeachableHub + Streamlit + Heroku](https://media-blog.sashido.io/content/images/2021/07/thslhe.001.jpeg)
 
-Integrate your Teachables within your Streamlit projects and deploy them on Heroku for free.
+**Let us tell you how:**
+
+- With TeachbleHub you can **set up, deploy, and serve predictions in less than 10 minutes.** 
+- Then you can seamlessly integrate your Teachables with the open-source app framework Streamlit and **create beautiful data apps in hours.** 
+- All in pure Python without any front-end experience required. 
+- Lastly, you can **easily run and operate these awesome ML apps** entirely in the cloud **at Heroku absolutely for free**. 
+
+And to put the cherry on top - this sweet stack won't not only make you super-fast, but it is also as cost-efficient as you can get!
+
 
 ## Demo Applications
+
+Check out our demo apps using the trifecta stack below:
 
 - [Iris Classifier with sklearn](https://th-iris-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
 - [BBC Text Classifier with Ludwig](https://th-ludwig-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
