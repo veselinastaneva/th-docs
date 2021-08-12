@@ -305,5 +305,5 @@ And to put the cherry on top - this sweet stack won't not only make you super-fa
 
 Check out our demo apps using the trifecta stack below:
 
-- [Iris Classifier with sklearn](https://th-iris-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
+- [Iris Classifier with sklearn](https://th-iris-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-sklearn-ui-demo-app))
 - [BBC Text Classifier with Ludwig](https://th-ludwig-demo.herokuapp.com/) ([source code](https://github.com/teachablehub/streamlit-ludwig-ui-demo-app))
