@@ -294,9 +294,9 @@ If you're one of those ambitious people who really want to get your models out t
 **Let us tell you how:**
 
 - With TeachbleHub you can **set up, deploy, and serve predictions in less than 10 minutes.** 
-- Then you can seamlessly integrate your Teachables with the open-source app framework Streamlit and **create beautiful data apps in hours.** 
+- Then you can seamlessly integrate your Teachables with the open-source app framework [Streamlit](https://streamlit.io/) and **create beautiful data apps in hours.** 
 - All in pure Python without any front-end experience required. 
-- Lastly, you can **easily run and operate these awesome ML apps** entirely in the cloud **at Heroku absolutely for free**. 
+- Lastly, you can **easily run and operate these awesome ML apps** entirely in the cloud **at [Heroku](https://heroku.com) absolutely for free**. 
 
 And to put the cherry on top - this sweet stack won't not only make you super-fast, but it is also as cost-efficient as you can get!
 
