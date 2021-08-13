@@ -75,7 +75,7 @@ Designed with simplicity in mind, TeachbaleHub provides you with free-of-charge 
 - Easy Teachable Cloud Predictions
 - and more.
 
-{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2F1_getting-started-ludwig.ipynb", type: "info", size: "medium", title: "Explore the Jupyter Notebook Environment on Deepnote"} }}
+{{button: { to: "https://deepnote.com/project/TeachableHub-eXmrWiQKTm6fXJFLzxxCpA/%2F1_getting-started-ludwig.ipynb", type: "info", size: "medium", title: "Explore the Jupyter Notebook Environment on Deepnote"}, target: "_blank" }}
 
 <br /><br /><br />
 
