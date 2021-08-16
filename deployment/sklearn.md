@@ -147,7 +147,6 @@ Data types allowed for the key value pairs can be one of the following Type Name
 | `integer`     | [int](#), [long](#) | [int](#) |
 | `number`     | [float](#), [int](#), [long](#), excl. [bool](#) | [float](#), [int](#), excl. [bool](#) |
 | `string`     | [basestring()](#) | [str](#) |
-| `date`     | [datetime.date](#) | [datetime.date](#) |
 
 ### `allowed`
 
