@@ -121,7 +121,6 @@ Data type allowed for the key value. Can be one of the following names:
 | `integer`     | [int](#), [long](#) | [int](#) |
 | `number`     | [float](#), [int](#), [long](#), excl. [bool](#) | [float](#), [int](#), excl. [bool](#) |
 | `string`     | [basestring()](#) | [str](#) |
-| `date`     | [datetime.date](#) | [datetime.date](#) |
 
 ### `allowed`
 
